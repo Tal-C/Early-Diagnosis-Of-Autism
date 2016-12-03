@@ -1,4 +1,4 @@
-# EIOA - Early Identification of Autism
+# EIOA - Early Identification Of Autism
 
 Final project
 
