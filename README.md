@@ -4,7 +4,7 @@
 
 
 ![headline](https://github.com/Tal-C/Identification-of-Autism/blob/master/pics/temp/logo.png)
-![logo](https://github.com/Tal-C/Identification-of-Autism/blob/master/pics/temp/images.jpg)
+
 
 ## Disclaimer
 This project is developed as a part of the Final Project - Diagnosis-of-Autism. 
