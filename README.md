@@ -16,11 +16,9 @@ responses to their enviroment, will be sent to the expert for follow treatment -
 ## Please visit our [live application](https://demo.reactstarterkit.com/)
 - Alright, currently only a landing page...
 
-## [Issue Board](https://github.com/katiapr/YotzimLilmod/issues)
+## [Issue Board](https://github.com/Tal-C/Identification-of-Autism/issues)
 
 Please visit our wiki for furthur project info: 
-
-### [User Manual](https://github.com/katiapr/YotzimLilmod/wiki/user-manual)
 
 ### [Team Page](https://github.com/Tal-C/Identification-of-Autism/wiki/Team)
 ### [Our Calendar] (https://teamup.com/ks6a6784e73f227028)
