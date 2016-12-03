@@ -1,4 +1,5 @@
-# EIOA - Early Identification Of Autism
+![headline](https://github.com/Tal-C/Identification-of-Autism/blob/master/pics/temp/logo.png)
+
 ![logo](https://github.com/Tal-C/Identification-of-Autism/blob/master/pics/temp/images.jpg)
 
 
