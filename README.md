@@ -4,7 +4,7 @@
 
 
 Final project - The project focuses on early detection of autism in infants,
-based on the video shooting by their parents.
-The report, that contain statistics of smile, movement and other
-responses to their enviroment, will send to the expert for follow treatment
+based on the video captured by their parents.
+The report, that contains statistics of smiles, face and eyes movement and other
+responses to their enviroment, will be sent to the expert for follow treatment
 
