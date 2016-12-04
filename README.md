@@ -3,7 +3,7 @@
 
 ###Welcome to the Early-Diagnosis-of-Autism wiki!
 
-## Disclaimer
+## Description
 This project is developed as a part of the Final Project - Diagnosis-of-Autism. 
 The project focuses on early detection of autism in infants,
 based on the video captured by their parents.
