@@ -29,11 +29,52 @@
     <Folder Include="Model\" />
     <Folder Include="Controller\" />
     <Folder Include="FlaskApp\" />
-    <Folder Include="templates\" />
+    <Folder Include="FlaskApp\templates\" />
+    <Folder Include="FlaskApp\static\css\" />
+    <Folder Include="FlaskApp\static\fonts\" />
+    <Folder Include="FlaskApp\static\font\" />
+    <Folder Include="FlaskApp\static\img\" />
+    <Folder Include="FlaskApp\static\js\" />
+    <Folder Include="FlaskApp\static\" />
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="templates\index.html" />
+    <Content Include="FlaskApp\static\css\bootstrap.css" />
+    <Content Include="FlaskApp\static\css\font-awesome.min.css" />
+    <Content Include="FlaskApp\static\css\main.css" />
+    <Content Include="FlaskApp\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="FlaskApp\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FlaskApp\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="FlaskApp\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="FlaskApp\static\font\fontawesome-webfont-.eot" />
+    <Content Include="FlaskApp\static\font\fontawesome-webfont-v=3.2.1.eot" />
+    <Content Include="FlaskApp\static\font\fontawesome-webfont-v=3.2.1.ttf" />
+    <Content Include="FlaskApp\static\font\fontawesome-webfont-v=3.2.1.woff" />
+    <Content Include="FlaskApp\static\font\fontawesome-webfont.svg" />
+    <Content Include="FlaskApp\static\img\header-bg.jpg" />
+    <Content Include="FlaskApp\static\img\item-01.png" />
+    <Content Include="FlaskApp\static\img\item-02.png" />
+    <Content Include="FlaskApp\static\img\item-bg.jpg" />
+    <Content Include="FlaskApp\static\img\portfolio-bg.jpg" />
+    <Content Include="FlaskApp\static\img\s1.png" />
+    <Content Include="FlaskApp\static\img\s2.png" />
+    <Content Include="FlaskApp\static\img\s3.png" />
+    <Content Include="FlaskApp\static\img\s4.png" />
+    <Content Include="FlaskApp\static\img\team01.jpg" />
+    <Content Include="FlaskApp\static\img\team02.jpg" />
+    <Content Include="FlaskApp\static\img\team03.jpg" />
+    <Content Include="FlaskApp\static\img\team04.jpg" />
+    <Content Include="FlaskApp\static\img\work1.png" />
+    <Content Include="FlaskApp\static\img\work2.png" />
+    <Content Include="FlaskApp\static\img\work3.png" />
+    <Content Include="FlaskApp\static\js\bootstrap.js" />
+    <Content Include="FlaskApp\static\js\bootstrap.min.js" />
+    <Content Include="FlaskApp\static\js\Chart.js" />
+    <Content Include="FlaskApp\static\js\classie.js" />
+    <Content Include="FlaskApp\static\js\jquery.min.js" />
+    <Content Include="FlaskApp\static\js\main.js" />
+    <Content Include="FlaskApp\static\js\smoothscroll.js" />
+    <Content Include="FlaskApp\templates\index.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FlaskApp\app.py">
