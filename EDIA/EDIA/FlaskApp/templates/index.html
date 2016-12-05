@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -8,13 +10,13 @@
     <link rel="shortcut icon" href="assets/ico/favicon.png">
     <title>Onassis - Bootstrap 3 Theme</title>
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
     <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/Chart.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/Chart.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
 
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -28,6 +30,7 @@
 <body data-spy="scroll" data-offset="0" data-target="#theMenu">
 
     <!-- Menu -->
+
     <nav class="menu" id="theMenu">
         <div class="menu-wrap">
             <h1 class="logo"><a href="index.html#home">Onassis</a></h1>
@@ -86,22 +89,22 @@
                 <br>
                 <br>
                 <div class="col-lg-3">
-                    <img src="assets/img/s1.png">
+                    <img src="{{url_for('static', filename='img/s1.png')}} ">
                     <h4>London</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
                 </div>
                 <div class="col-lg-3">
-                    <img src="assets/img/s2.png">
+                    <img src="{{url_for('static', filename='img/s2.png')}} ">
                     <h4>Berlin</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
                 </div>
                 <div class="col-lg-3">
-                    <img src="assets/img/s3.png">
+                    <img src="{{url_for('static', filename='img/s3.png')}} ">
                     <h4>Paris</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
                 </div>
                 <div class="col-lg-3">
-                    <img src="assets/img/s4.png">
+                    <img src="{{url_for('static', filename='img/s4.png')}} ">
                     <h4>Tokyo</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
                 </div>
@@ -185,13 +188,13 @@
                 <br>
                 <br>
                 <div class="col-lg-4 port-space">
-                    <a href="item.html"><img src="assets/img/work1.png"></a>
+                    <a href="item.html"><img src="{{url_for('static', filename='img/work1.png')}} "></a>
                 </div>
                 <div class="col-lg-4 port-space">
-                    <a href="item.html"><img src="assets/img/work2.png"></a>
+                    <a href="item.html"><img src="{{url_for('static', filename='img/work2.png')}} "></a>
                 </div>
                 <div class="col-lg-4 port-space">
-                    <a href="item.html"><img src="assets/img/work3.png"></a>
+                    <a href="item.html"><img src="{{url_for('static', filename='img/work3.png')}} "></a>
                 </div>
             </div>
         </div><!-- /container -->
@@ -224,7 +227,7 @@
                 </div>
                 <div class="col-lg-2"></div>
                 <div class="col-lg-3 team">
-                    <img class="img-circle" src="assets/img/team01.jpg" height="90" width="90">
+                    <img class="img-circle" src="{{url_for('static', filename='img/team01.jpg')}} " height="90" width="90">
                     <h4>Liz Stewart</h4>
                     <h5><i>Product Manager</i></h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -235,7 +238,7 @@
                     </p>
                 </div>
                 <div class="col-lg-3 team">
-                    <img class="img-circle" src="assets/img/team02.jpg" height="90" width="90">
+                    <img class="img-circle" src="{{url_for('static', filename='img/team02.jpg')}} " height="90" width="90">
                     <h4>Brad Casey</h4>
                     <h5><i>Front-end Developer</i></h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -246,7 +249,7 @@
                     </p>
                 </div>
                 <div class="col-lg-3 team">
-                    <img class="img-circle" src="assets/img/team03.jpg" height="90" width="90">
+                    <img class="img-circle" src="{{url_for('static', filename='img/team03.jpg')}} " height="90" width="90">
                     <h4>Pamela Chow</h4>
                     <h5><i>Web Designer</i></h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -257,7 +260,7 @@
                     </p>
                 </div>
                 <div class="col-lg-3 team">
-                    <img class="img-circle" src="assets/img/team04.jpg" height="90" width="90">
+                    <img class="img-circle" src="{{url_for('static', filename='img/team04.jpg')}} " height="90" width="90">
                     <h4>Tim Gates</h4>
                     <h5><i>Back-end Guru</i></h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -314,9 +317,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/classie.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/smoothscroll.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/classie.js') }}"> </script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"> </script>
+    <script src="{{ url_for('static', filename='js/smoothscroll.js') }}"> </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"> </script>
 </body>
 </html>
+
