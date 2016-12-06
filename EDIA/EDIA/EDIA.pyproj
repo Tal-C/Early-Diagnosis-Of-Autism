@@ -57,6 +57,7 @@
     <Content Include="FlaskApp\static\img\item-01.png" />
     <Content Include="FlaskApp\static\img\item-02.png" />
     <Content Include="FlaskApp\static\img\item-bg.jpg" />
+    <Content Include="FlaskApp\static\img\katia.jpg" />
     <Content Include="FlaskApp\static\img\logo.png" />
     <Content Include="FlaskApp\static\img\logo_trans.png" />
     <Content Include="FlaskApp\static\img\portfolio-bg.jpg" />
@@ -64,7 +65,8 @@
     <Content Include="FlaskApp\static\img\s2.png" />
     <Content Include="FlaskApp\static\img\s3.png" />
     <Content Include="FlaskApp\static\img\s4.png" />
-    <Content Include="FlaskApp\static\img\secong_bg.jpg" />
+    <Content Include="FlaskApp\static\img\secong_bg2.jpg" />
+    <Content Include="FlaskApp\static\img\tal4.jpg" />
     <Content Include="FlaskApp\static\img\team01.jpg" />
     <Content Include="FlaskApp\static\img\team02.jpg" />
     <Content Include="FlaskApp\static\img\team03.jpg" />
