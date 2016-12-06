@@ -127,7 +127,6 @@ a:after {
 /* Portfolio Wrap */
 #portfoliowrap {
 	background: url(../img/secong_bg.jpg) no-repeat center top;
-    opacity: 0.5;
 	margin-top: 0px;
 	padding-top:70px;
 	text-align:center;
@@ -149,7 +148,7 @@ a:after {
 
 
 #portfoliowrap h3 {
-	color: #000000;
+	color: black;
     font-size: 28px;
     font-weight: 300;
     font-family: Calibri;
@@ -157,6 +156,12 @@ a:after {
 
 .port-space {
 	padding-bottom: 20px;
+}
+
+#portfoliowrap p {
+    color: black;
+    font-family: Calibri;
+    font-size: 20px;
 }
 
 
@@ -207,7 +212,7 @@ a:after {
 }
 
 #f h3 {
-	color: white;	
+	color: white;
 }
 
 #f i {
