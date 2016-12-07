@@ -238,7 +238,7 @@ a:after {
 /* item Wrap */
 
 #itemwrap {
-	background: url(../img/item-bg.jpg) no-repeat center top;
+	background: url(../img/bg_login3.jpg) no-repeat center top;
 	margin-top: 0px;
 	padding-top:70px;
 	text-align:center;
@@ -311,10 +311,16 @@ a:after {
 }
 
 .menu-wrap {
+    /*background-color:;*/
+    
+    
 	position: absolute;
 	top: 0;
 	left: 60px;
-	background: #1a1a1a;
+	
+    background:url(../img/bg_login2.jpg) no-repeat center top #ffffff;
+    /*background: #ffb3ff;*/
+    /*opacity:0.8;*/
 	width: 200px;
 	height: 100%;
 }
@@ -342,7 +348,7 @@ a:after {
 .menu a {
 	margin-left: 20px;
     font-family: Calibri;
-	color: #808080;
+	color: #ffffff;
 	display: block;
 	font-size: 18px;
 	font-weight: 700;
@@ -352,7 +358,7 @@ a:after {
 }
 
 .menu a:hover {
-	color: #ffffff;
+	color: #000000;
 }
 
 .menu a:active {

@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="shortcut icon" href="{{url_for('static',filename='img/favicon.png')}}">
     <title>Onassis - Bootstrap 3 Theme</title>
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet">
     <!--regsth-->
     <!-- Custom styles for this template -->
     <link href="{{url_for('static',filename='css/main.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.min.css')}}">
-    <script src="{{url_for('static',filename='js/jquery.min.js')}}" ></script>
-    <script src="assets/js/Chart.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/Chart.js')}}"></script>
+    <script src="{{url_for('static',filename='js/modernizr.custom.js')}}"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
@@ -25,12 +25,12 @@
       <script src="assets/js/respond.min.js"></script>
     <![endif]-->
 </head>
-<body data-spy="scroll" data-offset="0" data-target="#theMenu">
-    reyrsyrseyrtytr
+<body data-spy="scroll" data-offset="0" data-target="#theMenu" >
+  
     <!-- Menu -->
-    <nav class="menu" id="theMenu">
-        <div class="menu-wrap">
-            <h1 class="logo"><a href="index.html#home">Onassis</a></h1>
+    <nav class="menu" id="theMenu" method="post">
+        <div class="menu-wrap" >
+            <img src="{{url_for('static', filename='img/logo.png')}} " />
             <i class="icon-remove menu-close"></i>
             <a href="#home" class="smoothScroll">Home</a>
             <a href="#services" class="smoothScroll">Services</a>
@@ -52,8 +52,9 @@
     <div id="itemwrap">
         <div class="container">
             <br>
-            <h1>Project</h1>
-            <h2>Web Design</h2>
+            <h1>EDOA</h1>
+            <h2>Early Diagnosis Of Autism</h2>
+            <h3>ברוכים הבאים</h3>
             <div class="row">
                 <br>
                 <br>
@@ -114,10 +115,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="assets/img/item-01.png" alt="">
+                                <img src="{{url_for('static',filename='img/item-01.png')}}" alt=" ">
                             </div>
                             <div class="item">
-                                <img src="assets/img/item-02.png" alt="">
+                                <img src="{{url_for('static',filename='img/item-02.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -168,7 +169,8 @@
                 <br>
                 <div class="col-lg-4">
                     <h3><b>Send Us A Message:</b></h3>
-                    <h3>onassis@blacktie.co</h3>
+                    <h3><i class="icon-envelope"></i> tal3433@gmail.com</h3>
+                    <h3><i class="icon-envelope"></i>katiapr89@gmail.com</h3>
                     <br>
                 </div>
 
@@ -203,10 +205,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/classie.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/retina.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{url_for('static',filename='js/classie.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
     <script>
         $('.carousel').carousel({
             interval: 3500

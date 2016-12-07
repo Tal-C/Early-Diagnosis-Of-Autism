@@ -66,6 +66,8 @@
     <Content Include="FlaskApp\static\font\fontawesome-webfont.svg" />
     <Content Include="FlaskApp\static\img\bg.jpg" />
     <Content Include="FlaskApp\static\img\bg2.png" />
+    <Content Include="FlaskApp\static\img\bg_login2.jpg" />
+    <Content Include="FlaskApp\static\img\bg_login3.jpg" />
     <Content Include="FlaskApp\static\img\default-avatar.png" />
     <Content Include="FlaskApp\static\img\faces\face-0.jpg" />
     <Content Include="FlaskApp\static\img\faces\face-1.jpg" />
@@ -82,6 +84,7 @@
     <Content Include="FlaskApp\static\img\item-02.png" />
     <Content Include="FlaskApp\static\img\item-bg.jpg" />
     <Content Include="FlaskApp\static\img\katia.jpg" />
+    <Content Include="FlaskApp\static\img\loading-bubbles.svg" />
     <Content Include="FlaskApp\static\img\logo.png" />
     <Content Include="FlaskApp\static\img\logo_trans.png" />
     <Content Include="FlaskApp\static\img\mask.png" />
@@ -91,7 +94,11 @@
     <Content Include="FlaskApp\static\img\s2.png" />
     <Content Include="FlaskApp\static\img\s3.png" />
     <Content Include="FlaskApp\static\img\s4.png" />
-    <Content Include="FlaskApp\static\img\secong_bg.jpg" />
+    <Content Include="FlaskApp\static\img\sidebar-1.jpg" />
+    <Content Include="FlaskApp\static\img\sidebar-2.jpg" />
+    <Content Include="FlaskApp\static\img\sidebar-3.jpg" />
+    <Content Include="FlaskApp\static\img\sidebar-4.jpg" />
+    <Content Include="FlaskApp\static\img\sidebar-5.jpg" />
     <Content Include="FlaskApp\static\img\team01.jpg" />
     <Content Include="FlaskApp\static\img\team02.jpg" />
     <Content Include="FlaskApp\static\img\team03.jpg" />
@@ -99,7 +106,7 @@
     <Content Include="FlaskApp\static\img\tim_80x80.png" />
     <Content Include="FlaskApp\static\img\work1.png" />
     <Content Include="FlaskApp\static\img\work2.png" />
-    <Content Include="FlaskApp\static\img\work3.png" />
+    <Content Include="FlaskApp\static\js\work3.png" />
     <Content Include="FlaskApp\static\js\bootstrap-checkbox-radio-switch.js" />
     <Content Include="FlaskApp\static\js\bootstrap-notify.js" />
     <Content Include="FlaskApp\static\js\bootstrap-select.js" />

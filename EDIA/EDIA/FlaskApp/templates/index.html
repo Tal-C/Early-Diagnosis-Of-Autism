@@ -34,11 +34,10 @@
 
     <nav class="menu" id="theMenu">
         <div class="menu-wrap">
-            <h1 class="logo"><a href="#home">EDOA</a></h1>
             <img src="{{url_for('static', filename='img/logo.png')}} " />
             <i class="icon-remove menu-close"></i>
             <a href="#home" class="smoothScroll">דף הבית</a>
-            <a href="#services" class="smoothScroll">התחברות</a>
+            <a href="{{ url_for('item')}}" class="smoothScroll">התחברות</a>
             <a href="#portfolio" class="smoothScroll">סימנים מוקדמים</a>
             <a href="#about" class="smoothScroll">אודות</a>
             <a href="#contact" class="smoothScroll">צור קשר</a>
