@@ -124,33 +124,122 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-4 desc desc-a">
-                    <h4><i class="icon-bullseye"></i> THE GOAL</h4>
-                    <p>Etiam dictum gravida nibh at accum san. Quisque aliquam risus bibendum diam elementum, et tempus enim suscipit. Duis sit amet euismod.</p>
-                    <br>
-                    <br>
-                    <h4><i class="icon-desktop"></i> THE RESULT</h4>
-                    <p>Etiam dictum gravida nibh at accum san. Quisque aliquam risus bibendum diam elementum, et tempus enim suscipit. Duis sit amet euismod.</p>
-                </div>
+                <!--====================================================================================-->
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">טופס הגשת בקשה</h4>
+                    </div>
+                    <div class="content">
+                        <form>
+                            <div class="row">
 
-                <div class="col-lg-4 desc">
-                    <h4><i class="icon-bolt"></i> THE IDEA</h4>
-                    <p>Etiam dictum gravida nibh at accum san. Quisque aliquam risus bibendum diam elementum, et tempus enim suscipit. Duis sit amet euismod.</p>
-                    <br>
-                    <br>
-                    <h4><i class="icon-bar-chart"></i> THE STATICS</h4>
-                    <p>Etiam dictum gravida nibh at accum san. Quisque aliquam risus bibendum diam elementum, et tempus enim suscipit. Duis sit amet euismod.</p>
-                </div>
-                <div class="col-lg-2"></div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>שם משתמש</label>
+                                        <input type="text" class="form-control" disabled placeholder="Username" value="tal&katia">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input type="email" class="form-control" disabled placeholder="tal_katia@email.com">
+                                    </div>
+                                </div>
+                            </div>
 
-            </div>
-            <div class="row">
-                <br>
-                <br>
-                <div class="col-lg-4 col-lg-offset-4">
-                    <a href="index.html#portfolio" style="font-size:20px;">< <i class="icon-th-large"></i> > </a>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>שם פרטי</label>
+                                        <input type="text" class="form-control" placeholder="First Name" value="דוד">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>שם משפחה</label>
+                                        <input type="text" class="form-control" placeholder="Last Name" value="כהן">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>כתובת</label>
+                                        <input type="text" class="form-control" placeholder="Home Address" value="טשרניחובסקי 50">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>עיר</label>
+                                        <input type="text" class="form-control" placeholder="City" value="רחובות">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>מיקוד</label>
+                                        <input type="text" class="form-control" placeholder="ZIP Code" value="0000000">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>טלפון</label>
+                                        <input type="text" class="form-control" placeholder="Phone Number" value="050-0000000">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>הערות</label>
+                                        <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">כאן, ישנה אפשרות להוסיף הערה במידת הצורך. השדה אינו חובה</textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!--------------------------------------------------------------------->
+                                <div>
+                                    <div><label for="image_file">כאן תוכל לבחור ולהעלות את הוידאו הרצוי </label></div>
+                                    <div><input type="file" name="video" id="video_file" onchange="fileSelected();" /></div>
+                                </div>
+                                <div>
+                                    <input type="button" value="העלה וידאו" onclick="startUploading()" />
+                                </div>
+                                <div id="fileinfo">
+                                    <div id="filename"></div>
+                                    <div id="filesize"></div>
+                                    <div id="filetype"></div>
+                                    <div id="filedim"></div>
+                                </div>
+                                <div id="error">You should select valid image files only!</div>
+                                <div id="error2">An error occurred while uploading the file</div>
+                                <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
+                                <div id="warnsize">Your file is very big. We can't accept it. Please select more small file</div>
+                                <div id="progress_info">
+                                    <div id="progress"></div>
+                                    <div id="progress_percent">&nbsp;</div>
+                                    <div class="clear_both"></div>
+                                    <div>
+                                        <div id="speed">&nbsp;</div>
+                                        <div id="remaining">&nbsp;</div>
+                                        <div id="b_transfered">&nbsp;</div>
+                                        <div class="clear_both"></div>
+                                    </div>
+                                    <div id="upload_response"></div>
+                                </div>
+                                <!--------------------------------------------------------------------->
+                            </div>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">הגשת בקשה</button>
+                            <!--   <div class="clearfix"></div>-->
+                        </form>
+                    </div>
                 </div>
+                <!--====================================================================================-->
             </div>
         </div>
     </div><!-- /dg -->
@@ -184,8 +273,8 @@
                     <br>
                 </div>
             </div>
-        </div>
-    </div><!-- /container -->
+
+        </div><!-- /container -->
     </div><!-- /f -->
 
     <div id="c">
