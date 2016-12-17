@@ -28,6 +28,7 @@
   <ItemGroup>
     <Folder Include="FlaskApp\static\css\images\" />
     <Folder Include="FlaskApp\static\img\faces\" />
+    <Folder Include="FlaskApp\static\pdf\" />
     <Folder Include="FlaskApp\static\saas\" />
     <Folder Include="FlaskApp\static\saas\lbd\" />
     <Folder Include="FlaskApp\static\saas\lbd\mixins\" />
@@ -67,6 +68,8 @@
     <Content Include="FlaskApp\static\font\fontawesome-webfont-v=3.2.1.ttf" />
     <Content Include="FlaskApp\static\font\fontawesome-webfont-v=3.2.1.woff" />
     <Content Include="FlaskApp\static\font\fontawesome-webfont.svg" />
+    <Content Include="FlaskApp\static\img\autism.png" />
+    <Content Include="FlaskApp\static\img\autism2.png" />
     <Content Include="FlaskApp\static\img\bg.jpg" />
     <Content Include="FlaskApp\static\img\bg2.png" />
     <Content Include="FlaskApp\static\img\bg_login2.jpg" />
@@ -128,6 +131,7 @@
     <Content Include="FlaskApp\static\js\light-bootstrap-dashboard.js" />
     <Content Include="FlaskApp\static\js\main.js" />
     <Content Include="FlaskApp\static\js\smoothscroll.js" />
+    <Content Include="FlaskApp\static\pdf\project.pdf" />
     <Content Include="FlaskApp\static\saas\lbd\mixins\_buttons.scss" />
     <Content Include="FlaskApp\static\saas\lbd\mixins\_cards.scss" />
     <Content Include="FlaskApp\static\saas\lbd\mixins\_chartist.scss" />

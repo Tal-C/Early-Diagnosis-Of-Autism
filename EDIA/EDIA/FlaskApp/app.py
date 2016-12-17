@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return render_template('index.html')
+    return render_template('item.html')
 
 @app.route('/item.html', methods=['GET', 'POST'])
 def item():
