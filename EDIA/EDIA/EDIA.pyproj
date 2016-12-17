@@ -26,6 +26,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="FlaskApp\static\css\images\" />
     <Folder Include="FlaskApp\static\img\faces\" />
     <Folder Include="FlaskApp\static\saas\" />
     <Folder Include="FlaskApp\static\saas\lbd\" />
@@ -48,6 +49,8 @@
     <Content Include="FlaskApp\static\css\bootstrap.min.css" />
     <Content Include="FlaskApp\static\css\demo.css" />
     <Content Include="FlaskApp\static\css\font-awesome.min.css" />
+    <Content Include="FlaskApp\static\css\images\ajax-loader.gif" />
+    <Content Include="FlaskApp\static\css\jquery.mobile-1.4.5.css" />
     <Content Include="FlaskApp\static\css\light-bootstrap-dashboard.css" />
     <Content Include="FlaskApp\static\css\main.css" />
     <Content Include="FlaskApp\static\css\pe-icon-7-stroke.css" />
@@ -79,6 +82,7 @@
     <Content Include="FlaskApp\static\img\faces\face-7.jpg" />
     <Content Include="FlaskApp\static\img\faces\tim_vector.jpe" />
     <Content Include="FlaskApp\static\img\favicon.ico" />
+    <Content Include="FlaskApp\static\img\gb_login4.jpg" />
     <Content Include="FlaskApp\static\img\header-bg.jpg" />
     <Content Include="FlaskApp\static\img\item-01.png" />
     <Content Include="FlaskApp\static\img\item-02.png" />
@@ -106,6 +110,7 @@
     <Content Include="FlaskApp\static\img\tim_80x80.png" />
     <Content Include="FlaskApp\static\img\work1.png" />
     <Content Include="FlaskApp\static\img\work2.png" />
+    <Content Include="FlaskApp\static\js\jquery-1.11.3.min.js" />
     <Content Include="FlaskApp\static\js\work3.png" />
     <Content Include="FlaskApp\static\js\bootstrap-checkbox-radio-switch.js" />
     <Content Include="FlaskApp\static\js\bootstrap-notify.js" />
