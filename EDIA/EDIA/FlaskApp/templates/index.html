@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
     <!--popup-->
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/jquery.mobile-1.4.5.css')}}">
 
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/Chart.js') }}"></script>
     <script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="{{url_for('static',filename='js/jquery-1.10.2.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.mobile-1.4.5.js')}}"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
@@ -98,9 +98,9 @@
                                 
                                 <h3>בורכים הבאים</h3>
                                 <label for="usrnm" class="ui-hidden-accessible">שם משתמש:</label>
-                                <input type="text" name="user" id="usrnm" placeholder="Username">
+                                <input type="text" name="user" id="usrnm" placeholder="שם משתמש">
                                 <label for="pswd" class="ui-hidden-accessible">סיסמא:</label>
-                                <input type="password" name="passw" id="pswd" placeholder="Password">
+                                <input type="password" name="passw" id="pswd" placeholder="סיסמא">
                                 <label for="log">זכור אותי</label>
                                 <input type="checkbox" name="login" id="log" value="1" data-mini="true">
                                 <input type="submit" data-inline="true" value="התחבר">
@@ -109,8 +109,6 @@
                         </form>
                     </div>
                 </div>
-            
-
             </div>
         </div><!-- /container -->
     </div><!-- /g -->

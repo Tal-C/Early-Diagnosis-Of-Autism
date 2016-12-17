@@ -14,9 +14,9 @@ def item():
 
         # redirect to end the POST handling
         # the redirect can be to the same route or somewhere else
-        return redirect(url_for('item'))
+        return redirect(url_for('index'))
       # show the form, it wasn't submitted
-    return render_template('index.html')
+    return render_template('item.html')
         
 
 if __name__ == "__main__":

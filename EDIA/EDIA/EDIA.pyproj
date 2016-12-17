@@ -71,6 +71,7 @@
     <Content Include="FlaskApp\static\img\bg2.png" />
     <Content Include="FlaskApp\static\img\bg_login2.jpg" />
     <Content Include="FlaskApp\static\img\bg_login3.jpg" />
+    <Content Include="FlaskApp\static\img\cloud03.jpg" />
     <Content Include="FlaskApp\static\img\default-avatar.png" />
     <Content Include="FlaskApp\static\img\faces\face-0.jpg" />
     <Content Include="FlaskApp\static\img\faces\face-1.jpg" />
@@ -111,6 +112,7 @@
     <Content Include="FlaskApp\static\img\work1.png" />
     <Content Include="FlaskApp\static\img\work2.png" />
     <Content Include="FlaskApp\static\js\jquery-1.11.3.min.js" />
+    <Content Include="FlaskApp\static\js\jquery.mobile-1.4.5.js" />
     <Content Include="FlaskApp\static\js\work3.png" />
     <Content Include="FlaskApp\static\js\bootstrap-checkbox-radio-switch.js" />
     <Content Include="FlaskApp\static\js\bootstrap-notify.js" />
