@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+
     <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.png') }} ">
     <!--Icon title-->
-    <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }} " type="image/png" />
+    <link rel="icon" href="{{ url_for('static', filename='img/logo_trans.png') }} " type="image/png" />
     <title>EDOA - Early Diagnosis Of Autism</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <!--popup-->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/jquery.mobile-1.4.5.css')}}">
+
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/Chart.js') }}"></script>
     <script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
-
+    <script src="{{url_for('static',filename='js/jquery-1.10.2.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.mobile-1.4.5.js')}}"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
@@ -29,16 +34,13 @@
     <![endif]-->
 </head>
 <body data-spy="scroll" data-offset="0" data-target="#theMenu">
-
     <!-- Menu -->
-
     <nav class="menu" id="theMenu">
         <div class="menu-wrap">
-            <h1 class="logo"><a href="#home">EDOA</a></h1>
             <img src="{{url_for('static', filename='img/logo.png')}} " />
             <i class="icon-remove menu-close"></i>
             <a href="#home" class="smoothScroll">דף הבית</a>
-            <a href="#services" class="smoothScroll">התחברות</a>
+            <a href="#SignIn" class="smoothScroll">התחברות</a>
             <a href="#portfolio" class="smoothScroll">סימנים מוקדמים</a>
             <a href="#about" class="smoothScroll">אודות</a>
             <a href="#contact" class="smoothScroll">צור קשר</a>
@@ -47,11 +49,9 @@
             <a href="#"><i class="icon-dribbble"></i></a>
             <a href="#"><i class="icon-envelope"></i></a>
         </div>
-
         <!-- Menu button -->
         <div id="menuToggle"><i class="icon-reorder"></i></div>
     </nav>
-
 
     <!-- ========== HEADER SECTION ========== -->
     <section id="home" name="home"></section>
@@ -83,32 +83,31 @@
         </div><!-- /container -->
     </div><!-- /w -->
     <!-- ========== SERVICES - GREY SECTION ========== -->
-    <section id="services" name="services"></section>
+    <section id="SignIn" name="services"></section>
     <div id="g">
         <div class="container">
             <div class="row">
                 <h3><b>התחברות</b></h3>
                 <br>
-                <br>
-                <div class="col-lg-3">
-                    <img src="{{url_for('static', filename='img/s1.png')}} ">
-                    <h4>London</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-                </div>
-                <div class="col-lg-3"> 
-                    <img src="{{url_for('static', filename='img/s2.png')}} ">
-                    <h4>Berlin</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-                </div>
-                <div class="col-lg-3">
-                    <img src="{{url_for('static', filename='img/s3.png')}} ">
-                    <h4>Paris</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-                </div>
-                <div class="col-lg-3">
-                    <img src="{{url_for('static', filename='img/s4.png')}} ">
-                    <h4>Tokyo</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+                <div data-role="main" class="ui-content">
+                    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">התחבר</a>
+
+                    <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+                        <form method="post" action="{{url_for('item')}}">
+                            <div>
+                                
+                                <h3>בורכים הבאים</h3>
+                                <label for="usrnm" class="ui-hidden-accessible">שם משתמש:</label>
+                                <input type="text" name="user" id="usrnm" placeholder="שם משתמש">
+                                <label for="pswd" class="ui-hidden-accessible">סיסמא:</label>
+                                <input type="password" name="passw" id="pswd" placeholder="סיסמא">
+                                <label for="log">זכור אותי</label>
+                                <input type="checkbox" name="login" id="log" value="1" data-mini="true">
+                                <input type="submit" data-inline="true" value="התחבר">
+                                <input type="submit" data-inline="true" value="הרשם">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div><!-- /container -->
@@ -126,17 +125,17 @@
                     <h4>Javascript</h4>
                     <br>
                     <script>
-						var doughnutData = [
+                        var doughnutData = [
 								{
-									value: 70,
-									color:"#f85c37"
+								    value: 70,
+								    color: "#f85c37"
 								},
 								{
-									value : 30,
-									color : "#ecf0f1"
+								    value: 30,
+								    color: "#ecf0f1"
 								}
-							];
-							var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
+                        ];
+                        var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
                     </script>
                 </div>
                 <div class="col-lg-4">
@@ -145,17 +144,17 @@
                     <h4>Bootstrap</h4>
                     <br>
                     <script>
-						var doughnutData = [
+                        var doughnutData = [
 								{
-									value: 90,
-									color:"#f85c37"
+								    value: 90,
+								    color: "#f85c37"
 								},
 								{
-									value : 10,
-									color : "#ecf0f1"
+								    value: 10,
+								    color: "#ecf0f1"
 								}
-							];
-							var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
+                        ];
+                        var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
                     </script>
                 </div>
                 <div class="col-lg-4">
@@ -164,37 +163,35 @@
                     <h4>Wordpress</h4>
                     <br>
                     <script>
-						var doughnutData = [
+                        var doughnutData = [
 								{
-									value: 55,
-									color:"#f85c37"
+								    value: 55,
+								    color: "#f85c37"
 								},
 								{
-									value : 45,
-									color : "#ecf0f1"
+								    value: 45,
+								    color: "#ecf0f1"
 								}
-							];
-							var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
+                        ];
+                        var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
                     </script>
                 </div>
-
             </div>
         </div><!-- /container -->
     </div><!-- /dg -->
-
     <section id="portfolio" name="portfolio"></section>
     <div id="portfoliowrap">
         <div class="container">
             <div class="row">
                 <h3><b>סימנים מוקדמים</b></h3>
                 <br />
-                <p><b><u>פאסיביות יתר</u></b></p>              
+                <p><b><u>פאסיביות יתר</u></b></p>
                 <p>חוסר בכי, חוסר תנועה, העדר עניין בסביבה – לעיתים קרובות התינוק נראה נינוח, אינו מראה סימנים של חוסר נוחות, רעב וכדומה, ישן לילה שלם במהלך חודשי החיים הראשונים</p>
-                <p><b><u> פעילות יתר</u></b></p>                
+                <p><b><u> פעילות יתר</u></b></p>
                 <p>בכי מתמשך, חוסר רוגע פיזי, תנועתיות יתר. לעיתים תינוקות שנראים פאסיביים במהלך שנת חייהם הראשונה נעשים אקטיביים בשנת החיים השנייה. במחקר התגלה שתינוקות הבוכים הרבה במהלך שנת חייהם הראשונה עלולים להיות היפראקטיביים בתקופת הילדות</p>
                 <p><b><u> חוסר רצון או התנגדות לאכול או לינוק</u></b></p>
                 <p>אחוז גבוה מהילדים בספקטרום האוטיזם מראים קשיי אכילה ברמות שונות – סירוב לינוק, התנגדות למעבר לבקבוק או למעבר מאוכל נוזלי למוצק, אכילה מתוך תפריט מצומצם. במקרים רבים ניתן לראות קשיים אלה כבר בחודשי החיים הראשונים</p>
-                <p><b><u>גדילה מואצת של היקף הראש ביחס לנקודת ההתחלה</u></b></p> 
+                <p><b><u>גדילה מואצת של היקף הראש ביחס לנקודת ההתחלה</u></b></p>
                 <p>במקרים מסוימים ילדים המאובחנים עם אוטיזם נולדים עם היקף ראש קטן יחסית, אך בתוך שנתיים עשוי  לגדול במהירות מואצת ומגיע למימדים גדולים בהשוואה להיקף הראש של ילדים עם התפתחות תקינה. סימן זה אינו מובהק</p>
                 <p><b><u>עיכוב בהתפתחות המוטורית</u></b></p>
                 <p>ישנם תינוקות עם הפרעה בהתפתחות הקשר שהתפתחותם המוטורית מהירה, אולם לעיתים קרובות לתינוקות אלה יש היפוטוניה (מתח שרירי נמוך), וההתפתחות המוטורית שלהם מעוכבת. סימן זה לכשעצמו אינו מובהק</p>
@@ -204,7 +201,6 @@
                 <p>חלק מהתינוקות חווים הצפה תחושתית ולכן מגע פיזי מפריע להם. אין ספק שהדבר גורם לתחושות קשות אצל ההורים, אולם חשוב להבין שהתינוק אינו דוחה אותם, אלא חווה קושי אמיתי בתחושה הטקטילית (עורית</p>
                 <p><b><u>חוסר תגובה לקול או לנוכחות ההורה</u></b></p>
                 <p>אין הפניה של הראש, חיוך או מלמול. יש לעשות הבחנה בין העדר תגובה לקול לבין העדר תגובה לנוכחות ההורה – גם אם התינוק איננו שומע הוא יגיב לנוכחות ההורה. בכל מקרה יש לבצע בדיקת שמיעה לפני שמסיקים מסקנות כלשהן </p>
-
             </div>
         </div><!-- /container -->
     </div><!-- /portfoliowrap -->
@@ -230,7 +226,7 @@
                 <br>
                 <div class="col-lg-3 team">
                     <img class="img-circle" src="{{url_for('static', filename='img/tal4.jpg')}} " height="120" width="120">
-                    <img class="img-circle" src="{{url_for('static', filename='img/katia.jpg')}} " height="120" width="120">                   
+                    <img class="img-circle" src="{{url_for('static', filename='img/katia.jpg')}} " height="120" width="120">
                     <h4>Tal Cohen  &  Katia Prigon</h4>
                     <h5><i>Developers and web founders</i></h5>
                     <p>Software engineers, building web application to processing and analysis data to diagnose autism at an early age</p>
@@ -240,7 +236,6 @@
                         <a href="index.html#"><i class="icon-envelope"></i></a>
                     </p>
                 </div>
-
             </div>
         </div><!-- /container -->
     </div><!-- /g -->
@@ -257,14 +252,12 @@
                     <h3>katiapr89@gmail.com</h3>
                     <br>
                 </div>
-
                 <div class="col-lg-4">
                     <h3><b>Call Us:</b></h3>
                     <h3>+972 524837638</h3>
                     <h3>+972 545592596</h3>
                     <br>
                 </div>
-
                 <div class="col-lg-4">
                     <h3><b>We Are Social</b></h3>
                     <p>
@@ -275,17 +268,14 @@
                     <br>
                 </div>
             </div>
-        </div>
-    </div><!-- /container -->
-    </div><!-- /f -->
 
+        </div><!-- /container -->
+    </div><!-- /f -->
     <div id="c">
         <div class="container">
             <p>Created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>
-
         </div>
     </div>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
