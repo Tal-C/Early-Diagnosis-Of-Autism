@@ -276,6 +276,7 @@ table {
   }
   .label {
     border: 1px solid #000;
+   font-family:Calibri
   }
   .table {
     border-collapse: collapse !important;
