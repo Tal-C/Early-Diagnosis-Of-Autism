@@ -4486,7 +4486,6 @@ $.widget( "mobile.page", {
 	},
 
 	bindRemove: function (callback) {
-	    alert(callback)
 		var page = this.element;
 
 		// when dom caching is not enabled or the page is embedded bind to remove the page on hide
