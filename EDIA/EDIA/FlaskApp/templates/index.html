@@ -1,6 +1,6 @@
 ﻿
 <!DOCTYPE html>
-<html lang="he">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,11 +39,11 @@
         <div class="menu-wrap">
             <img src="{{url_for('static', filename='img/logo.png')}} " />
             <i class="icon-remove menu-close"></i>
-            <a href="#home" class="smoothScroll">דף הבית</a>
-            <a href="#SignIn" class="smoothScroll">התחברות</a>
-            <a href="#portfolio" class="smoothScroll">סימנים מוקדמים</a>
-            <a href="#about" class="smoothScroll">אודות</a>
-            <a href="#contact" class="smoothScroll">צור קשר</a>
+            <a href="#home" class="smoothScroll">Home Page</a>
+            <a href="#SignIn" class="smoothScroll">Login</a>
+            <a href="#portfolio" class="smoothScroll">Early Signs</a>
+            <a href="#about" class="smoothScroll">About</a>
+            <a href="#contact" class="smoothScroll">Conact Us</a>
             <a href="#"><i class="icon-facebook"></i></a>
             <a href="#"><i class="icon-twitter"></i></a>
             <a href="#"><i class="icon-dribbble"></i></a>
@@ -75,8 +75,8 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>
-                        אוטיזם היא הפרעה נוירולוגית הגורמת לקשיי תקשורת ולקושי בהתערות חברתית עם אחרים.
-                        <bold>ילדים אוטיסטים בדרך כלל מדברים מעט, מתעלמים מאחרים וחוזרים פעם אחר פעם על פעולות והתנהגויות כמו למשל להסתובב במעגלים או להתמקד בחפץ מסויים אחד שעות ארוכות. </bold> הם מצטיינים בפעולות המצריכות ירידה לפרטים, כמו איות או נגינה אבל הם נסערים כאשר הם נדרשים להתמודד עם העולם השלם של חייהם<br />
+                         Autism is a neurological disorder that causes communication and socialize difficulties with others.
+                        <bold> Autistic children usually speak little, ignore others and come back again and again on the actions and behaviors such as spin in circles or focus on a particular object of hours.</bold> They excel in activities that require attention to the details, such as spelling or instruments but are upset when they are faced with a whole world of life <br />
                     </h3>
                 </div>
             </div>
@@ -87,24 +87,24 @@
     <div id="g">
         <div class="container">
             <div class="row">
-                <h3><b>התחברות</b></h3>
+                <h3><b>Login</b></h3>
                 <br>
                 <div class="ui-content">
-                    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">התחבר</a>
+                    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Login</a>
 
                     <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
                         <form method="post" action="{{url_for('item')}}">
                             <div>
                                 
-                                <h3>ברוכים הבאים</h3>
-                                <label for="usrnm" class="ui-hidden-accessible">שם משתמש:</label>
-                                <input type="text" name="user" id="usrnm" placeholder="שם משתמש">
-                                <label for="pswd" class="ui-hidden-accessible">סיסמא:</label>
-                                <input type="password" name="passw" id="pswd" placeholder="סיסמא">
-                                <label for="log">זכור אותי</label>
+                                <h3>Welcome</h3>
+                                <label for="usrnm" class="ui-hidden-accessible">User Name:</label>
+                                <input type="text" name="user" id="usrnm" placeholder="User Name">
+                                <label for="pswd" class="ui-hidden-accessible">Password:</label>
+                                <input type="password" name="passw" id="pswd" placeholder="Password">
+                                <label for="log">Remember Me</label>
                                 <input type="checkbox" name="login" id="log" value="1" data-mini="true">
-                                <input type="submit" data-inline="true" value="התחבר">
-                                <input type="submit" data-inline="true" value="הרשם">
+                                <input type="submit" data-inline="true" value="Login">
+                                <input type="submit" data-inline="true" value="Sign Up">
                             </div>
                         </form>
                     </div>
@@ -183,24 +183,24 @@
     <div id="portfoliowrap">
         <div class="container">
             <div class="row">
-                <h3><b>סימנים מוקדמים</b></h3>
+                <h3><b>Early Signs</b></h3>
                 <br />
-                <p><b><u>פאסיביות יתר</u></b></p>
-                <p>חוסר בכי, חוסר תנועה, העדר עניין בסביבה – לעיתים קרובות התינוק נראה נינוח, אינו מראה סימנים של חוסר נוחות, רעב וכדומה, ישן לילה שלם במהלך חודשי החיים הראשונים</p>
-                <p><b><u> פעילות יתר</u></b></p>
-                <p>בכי מתמשך, חוסר רוגע פיזי, תנועתיות יתר. לעיתים תינוקות שנראים פאסיביים במהלך שנת חייהם הראשונה נעשים אקטיביים בשנת החיים השנייה. במחקר התגלה שתינוקות הבוכים הרבה במהלך שנת חייהם הראשונה עלולים להיות היפראקטיביים בתקופת הילדות</p>
-                <p><b><u> חוסר רצון או התנגדות לאכול או לינוק</u></b></p>
-                <p>אחוז גבוה מהילדים בספקטרום האוטיזם מראים קשיי אכילה ברמות שונות – סירוב לינוק, התנגדות למעבר לבקבוק או למעבר מאוכל נוזלי למוצק, אכילה מתוך תפריט מצומצם. במקרים רבים ניתן לראות קשיים אלה כבר בחודשי החיים הראשונים</p>
-                <p><b><u>גדילה מואצת של היקף הראש ביחס לנקודת ההתחלה</u></b></p>
-                <p>במקרים מסוימים ילדים המאובחנים עם אוטיזם נולדים עם היקף ראש קטן יחסית, אך בתוך שנתיים עשוי  לגדול במהירות מואצת ומגיע למימדים גדולים בהשוואה להיקף הראש של ילדים עם התפתחות תקינה. סימן זה אינו מובהק</p>
-                <p><b><u>עיכוב בהתפתחות המוטורית</u></b></p>
-                <p>ישנם תינוקות עם הפרעה בהתפתחות הקשר שהתפתחותם המוטורית מהירה, אולם לעיתים קרובות לתינוקות אלה יש היפוטוניה (מתח שרירי נמוך), וההתפתחות המוטורית שלהם מעוכבת. סימן זה לכשעצמו אינו מובהק</p>
-                <p><b><u>חוסר קשר עין ישיר עם אנשים</u></b></p>
-                <p>לתינוק עם הפרעה התפתחותית בהתקשרות אין קושי להתבונן בחפץ אולם יכול לגלות קושי ליצור קשר עין ישיר עם אנשים. ישנם תינוקות הזקוקים לפרק זמן ארוך יותר (בגיל 4-5 חודשים) על מנת שערוצי הראייה יבשילו</p>
-                <p><b><u>רתיעה ממגע של הורה או כל אדם אחר</u></b></p>
-                <p>חלק מהתינוקות חווים הצפה תחושתית ולכן מגע פיזי מפריע להם. אין ספק שהדבר גורם לתחושות קשות אצל ההורים, אולם חשוב להבין שהתינוק אינו דוחה אותם, אלא חווה קושי אמיתי בתחושה הטקטילית (עורית</p>
-                <p><b><u>חוסר תגובה לקול או לנוכחות ההורה</u></b></p>
-                <p>אין הפניה של הראש, חיוך או מלמול. יש לעשות הבחנה בין העדר תגובה לקול לבין העדר תגובה לנוכחות ההורה – גם אם התינוק איננו שומע הוא יגיב לנוכחות ההורה. בכל מקרה יש לבצע בדיקת שמיעה לפני שמסיקים מסקנות כלשהן </p>
+                <p><b><u>Passive rest</u></b></p>
+                <p><b>Lack of tears, lack of movement, lack of interest in the environment - often the baby looked comfortable, showing signs of discomfort, hunger etc. Sleeping overnight during the first months of life</b></p>
+                <p><b><u>Overactive</u></b></p>
+                <p><b>Prolonged crying, physical restlessness, excessive movement. Sometimes babies seem passive during their first year of life are becoming active in the second. The study revealed that babies who cry a lot during the first year of life may be hyperactive in childhood</b></p>
+                <p><b><u>Reluctance or resistance to eat</u></b></p>
+                <p><b>A high percentage of children on the autism spectrum show different levels of difficulty eating - Refusal to breastfeed, bottle or resistance of transition from liquid to solid food, eating from a limited menu. In many cases, these difficulties can be seen already during early life</b></p>
+                <p><b><u>Accelerated growth of head circumference in relation to the starting point</u></b></p>
+                <p><b>In some cases, children diagnosed with autism are born with a relatively small head circumference, but within two years may grow rapidly accelerated and reaches large dimensions in relation to the head of children with normal development.  This sign itself is not significant</b></p>
+                <p><b><u>Delayed motor development</u></b></p>
+                <p><b>Some babies with impaired motor development context whose development was fast, but these babies often have hypotonia (low muscle tension), and delayed motor development. This sign itself is not significant</b></p>
+                <p><b><u>Lack of direct eye contact with people</u></b></p>
+                <p><b>Baby with a developmental disorder engagement is not difficult to look at an object but may find difficult to make direct eye contact with people. There are babies who need a longer period of time (age 4-5 months) to mature visual channels</b></p>
+                <p><b><u>Reluctance to contact the parent or any other person</u></b></p>
+                <p><b>Some babies experiencing sensory flooding and therefore bother them physical contact. There is no doubt that this was causing disillusionment with the parents, but it is important to understand that the baby does not reject them, but experiencing real difficulty tactile sensation (cutaneous</b></p>
+                <p><b><u>Lack of response to the sound or the presence of a parent</u></b></p>
+                <p><b>There is no reference to the head, a smile or a murmur. Have to make a distinction between the lack of response to the sound and the lack of response to their presence - even if the baby does not hear it will react to their presence. Anyway hearing test should be performed before drawing any conclusions</b></p>
             </div>
         </div><!-- /container -->
     </div><!-- /portfoliowrap -->
@@ -210,7 +210,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>
-                        מחקרים חדשים קובעים כי ככל שיקדם מועד הגילוי של הבעיה, כך יגדל הסיכוי לשיפור במיומנות הקוגניטיבת, בשפה, בקשר החברתי ובפעולות המוטוריות
+                        New studies indicate that as promote the disclosure date of issue, the more likely improve cognitive skills, language, social connection and motor actions
                     </h3>
                 </div>
             </div>
@@ -221,7 +221,7 @@
     <div id="g">
         <div class="container">
             <div class="row">
-                <h3><b>אודות</b></h3>
+                <h3><b>About</b></h3>
                 <br>
                 <br>
                 <div class="col-lg-3 team">
