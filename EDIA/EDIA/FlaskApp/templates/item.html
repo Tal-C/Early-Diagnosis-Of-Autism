@@ -32,10 +32,10 @@
         <div class="menu-wrap">
             <img src="{{url_for('static', filename='img/logo.png')}} " />
             <i class="icon-remove menu-close"></i>
-            <a href="#guidelines" class="smoothScroll">Instruction page</a>
-            <a href="#request" class="smoothScroll">טופס הגשת בקשה</a>
-            <a href="#portfolio" class="smoothScroll">יציאה מהמערכת</a>
-            <a href="#contact" class="smoothScroll">יצירת קשר</a>
+            <a href="#guidelines" class="smoothScroll">Guidelines page</a>
+            <a href="#request" class="smoothScroll">Application form</a>
+            <a href="#portfolio" class="smoothScroll">Lof off</a>
+            <a href="#contact" class="smoothScroll">Contact</a>
             <a href="#"><i class="icon-facebook"></i></a>
             <a href="#"><i class="icon-twitter"></i></a>
             <a href="#"><i class="icon-dribbble"></i></a>
@@ -53,7 +53,7 @@
             <br>
             <h1>EDOA</h1>
             <h2>Early Diagnosis Of Autism</h2>
-            <h3>ברוכים הבאים</h3>
+            <h3>Welcome</h3>
             <div class="row">
                 <br>
                 <br>
@@ -69,8 +69,8 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>
-                        אוטיזם היא הפרעה נוירולוגית הגורמת לקשיי תקשורת ולקושי בהתערות חברתית עם אחרים.
-                        <bold>ילדים אוטיסטים בדרך כלל מדברים מעט, מתעלמים מאחרים וחוזרים פעם אחר פעם על פעולות והתנהגויות כמו למשל להסתובב במעגלים או להתמקד בחפץ מסויים אחד שעות ארוכות. </bold> הם מצטיינים בפעולות המצריכות ירידה לפרטים, כמו איות או נגינה אבל הם נסערים כאשר הם נדרשים להתמודד עם העולם השלם של חייהם<br />
+                         Autism is a neurological disorder that causes communication difficulties and difficulties socialize with others.
+                        <bold>Autistic children usually speak little, ignore others and come back again and again on the actions and behaviors such as spin in circles or focus on a particular object of hours. </bold> They excel in activities that require attention to the details, such as spelling or instruments but are upset when they are faced with a whole world of life<br />
                     </h3>
                 </div>
             </div>
@@ -81,10 +81,10 @@
     <div id="g">
         <div class="container">
             <div class="row">
-                <h3>הנחיות לצילום</h3>
+                <h3>Guidelines photography</h3>
                 <br>
                 <br>
-                <h4>לחצו על האייקון להורדת ההנחיות</h4>
+                <h4>Click on the icon to download the guidelines</h4>
                 <a href="{{url_for('static', filename='pdf/project.pdf')}}" download>
                     <img border="0" src="{{url_for('static', filename='img/logo_trans.png')}}" width="104" height="142">
                 </a>
@@ -127,7 +127,7 @@
                 <!--====================================================================================-->
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">טופס הגשת בקשה</h4>
+                        <h4 class="title"><b>Application form</b></h4>
                     </div>
                     <div class="content">
                         <form>
@@ -135,8 +135,8 @@
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>שם משתמש</label>
-                                        <input type="text" class="form-control" disabled placeholder="Username" value="tal&katia">
+                                        <label><b>User name</b></label>
+                                        <input type="text" class="form-control" disabled placeholder="User name" value="tal&katia">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -150,13 +150,13 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>שם פרטי</label>
+                                        <label><b>First name:</b></label>
                                         <input type="text" class="form-control" placeholder="First Name" value="דוד">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>שם משפחה</label>
+                                        <label><b>Last name:</b></label>
                                         <input type="text" class="form-control" placeholder="Last Name" value="כהן">
                                     </div>
                                 </div>
@@ -165,28 +165,13 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>כתובת</label>
+                                        <label><b>Address</b></label>
                                         <input type="text" class="form-control" placeholder="Home Address" value="טשרניחובסקי 50">
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>עיר</label>
-                                        <input type="text" class="form-control" placeholder="City" value="רחובות">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>מיקוד</label>
-                                        <input type="text" class="form-control" placeholder="ZIP Code" value="0000000">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>טלפון</label>
+                                        <label><b>Phone</b></label>
                                         <input type="text" class="form-control" placeholder="Phone Number" value="050-0000000">
                                     </div>
                                 </div>
@@ -195,8 +180,23 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>הערות</label>
-                                        <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">כאן, ישנה אפשרות להוסיף הערה במידת הצורך. השדה אינו חובה</textarea>
+                                        <label><b>City</b></label>
+                                        <input type="text" class="form-control" placeholder="City" value="רחובות">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>ZIP code</label>
+                                        <input type="text" class="form-control" placeholder="ZIP Code" value="0000000">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Comments</label>
+                                        <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">It is possible to add a comment if needed. The field is optional</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -204,11 +204,11 @@
                             <div class="row">
                                 <!--------------------------------------------------------------------->
                                 <div>
-                                    <div><label for="image_file">כאן תוכל לבחור ולהעלות את הוידאו הרצוי </label></div>
+                                    <div><label for="image_file">Here you can select and upload the video you want</label></div>
                                     <div><input type="file" name="video" id="video_file" onchange="fileSelected();" /></div>
                                 </div>
                                 <div>
-                                    <input type="button" value="העלה וידאו" onclick="startUploading()" />
+                                    <input type="button" value="Upload video" onclick="startUploading()" />
                                 </div>
                                 <div id="fileinfo">
                                     <div id="filename"></div>
@@ -234,9 +234,10 @@
                                 </div>
                                 <!--------------------------------------------------------------------->
                             </div>
-                            <button type="submit" class="btn btn-info btn-fill pull-right">הגשת בקשה</button>
-                            <!--   <div class="clearfix"></div>-->
-                        </form>
+                                <button type="submit" class="btn btn-info btn-fill pull-right">Submit a request</button>
+                               
+                                <!--   <div class="clearfix"></div>-->
+</form>
                     </div>
                 </div>
                 <!--====================================================================================-->
@@ -259,7 +260,8 @@
 
                 <div class="col-lg-4">
                     <h3><b>Call Us:</b></h3>
-                    <h3>+55 3984-4389</h3>
+                    <h3>+972 524837638</h3>
+                    <h3>+972 545592596</h3>
                     <br>
                 </div>
 
