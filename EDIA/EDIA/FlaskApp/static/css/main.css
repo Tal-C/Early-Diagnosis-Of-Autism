@@ -479,6 +479,10 @@ a:after {
 	
 }
 
+.wrapper {
+    text-align: center;
+}
+
 /* TEAM CONF */
 
 .team {
