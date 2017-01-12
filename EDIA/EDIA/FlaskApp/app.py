@@ -1,5 +1,4 @@
-﻿
-from flask import Flask, render_template, url_for,request,redirect
+﻿from flask import Flask, render_template, url_for,request,redirect
 import requests
 #from lxml import html
 #import cgi   
