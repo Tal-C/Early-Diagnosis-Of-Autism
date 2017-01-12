@@ -181,13 +181,13 @@
     <Content Include="FlaskApp\templates\item.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlaskApp\MySQLConnector.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FlaskApp\UserController.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskApp\app.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FlaskApp\MySQLconnection.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskApp\students_dbconfig.py">
