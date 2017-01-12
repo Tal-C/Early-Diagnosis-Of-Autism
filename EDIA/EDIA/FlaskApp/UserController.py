@@ -9,6 +9,5 @@ class UserController():
         ##reg exp
         ##send to MySQLConnector
         tbl = MySQLConnector.ExecuteSP()
-        print("Hello")
         print("the beach is beautiful!")
        
