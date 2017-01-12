@@ -1,4 +1,4 @@
-﻿import MySQLconnection
+﻿from MySQLConnector import MySQLConnector
 
 class UserController():
 
@@ -8,6 +8,7 @@ class UserController():
     def login_page(userName,password):
         ##reg exp
         ##send to MySQLConnector
+        tbl = MySQLConnector.ExecuteSP()
         print("Hello")
         print("the beach is beautiful!")
        
