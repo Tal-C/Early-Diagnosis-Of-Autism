@@ -35,7 +35,7 @@ def item():
     except Exception as e:
         return render_template("item.html",error = error)
         #return redirect(url_for('item'))
-    # show the form, it wasn't submitted
+      # show the form, it wasn't submitted
     return render_template('index.html')
         
 
