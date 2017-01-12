@@ -33,7 +33,7 @@
     <Folder Include="FlaskApp\static\saas\lbd\" />
     <Folder Include="FlaskApp\static\saas\lbd\mixins\" />
     <Folder Include="Model\" />
-    <Folder Include="Controller\" />
+    <Folder Include="FlaskApp\Controller\" />
     <Folder Include="FlaskApp\" />
     <Folder Include="FlaskApp\templates\" />
     <Folder Include="FlaskApp\static\css\" />
@@ -181,9 +181,29 @@
     <Content Include="FlaskApp\templates\item.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlaskApp\UserController.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FlaskApp\app.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FlaskApp\MySQLconnection.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\students_dbconfig.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\User.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <Name>MySql.Data</Name>
+      <AssemblyName>MySql.Data.dll</AssemblyName>
+      <HintPath>..\..\..\..\..\Downloads\downloads\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
