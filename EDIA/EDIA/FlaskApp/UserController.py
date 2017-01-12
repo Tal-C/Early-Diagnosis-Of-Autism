@@ -8,6 +8,8 @@ class UserController():
     def login_page(userName,password):
         ##reg exp
         ##send to MySQLConnector
-        tbl = MySQLConnector.ExecuteSP()
+        params= (userName,password)
+        row = MySQLConnector.ExecuteSP("sp_get_user",params)
         print("the beach is beautiful!")
+        return row
        

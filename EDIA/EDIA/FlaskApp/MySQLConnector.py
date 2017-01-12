@@ -21,14 +21,18 @@ class MySQLConnector():
             #conn._connection_timeout
             #------------------------#
             i = 0
+            args = [i for i in range(0,len(params))]
             for p in params:
                 args[i] = p
                 i += 1
             #------------------------#
             #args = params????????????
             #args = ['1236400967773', 0]
-            result_args = cursor.callproc(procedure_name, args)
- 
+            result_args = cursor.callproc('sp_get_user', args)
+            
+            #for result in cursor._stored_results:
+                #print(result.fetchall())
+            print(result_args[1])
             return result_args
  
         except Error as e:
