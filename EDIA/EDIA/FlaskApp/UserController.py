@@ -8,5 +8,6 @@ class UserController():
     def login_page(userName,password):
         ##reg exp
         ##send to MySQLConnector
+        print("Hello")
         print("the beach is beautiful!")
        

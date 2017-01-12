@@ -187,9 +187,6 @@
     <Compile Include="FlaskApp\app.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="FlaskApp\MySQLconnection.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="FlaskApp\students_dbconfig.py">
       <SubType>Code</SubType>
     </Compile>
