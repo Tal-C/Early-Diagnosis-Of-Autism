@@ -7,7 +7,7 @@
     <ProjectGuid>157de693-197b-4cf9-81f9-36d5d676a767</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>FlaskApp\insert.py</StartupFile>
+    <StartupFile>FlaskApp\app.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -206,6 +206,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskApp\python_mysql_dbconfig.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\socket.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
