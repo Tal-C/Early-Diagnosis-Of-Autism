@@ -9,7 +9,9 @@ class UserController():
         ##reg exp
         ##send to MySQLConnector
         params= (userName,password)
-        row = MySQLConnector.ExecuteSP("sp_get_user",params)
+        row = MySQLConnector.ExecuteSPParams('sp_get_user',params)
         print("the beach is beautiful!")
-        return row
+        if(len(row) == 0):
+            return -1
+        return 0
        

@@ -26,13 +26,15 @@ def item():
             print("Password = ",attempted_password)
             resp = UserController.login_page(attempted_username,attempted_password)
             if resp == 0:
-                flash("You are now logged in!")
+                print("You are now logged in!")
                 return render_template("item.html")
             else:
                 error = "Invalid credetials,try again .!. "
+                print(error)
+                return render_template("index.html",error = error)
             gc.collect()
     except Exception as e:
-        return render_template("item.html",error = error)
+        return render_template("index.html",error = error)
         #return redirect(url_for('item'))
       # show the form, it wasn't submitted
     return render_template('index.html')
