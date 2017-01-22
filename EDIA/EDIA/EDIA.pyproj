@@ -179,6 +179,7 @@
     <Content Include="FlaskApp\static\saas\light-bootstrap-dashboard.scss" />
     <Content Include="FlaskApp\templates\index.html" />
     <Content Include="FlaskApp\templates\item.html" />
+    <Content Include="FlaskApp\templates\popup.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FlaskApp\MySQLConnector.py">
