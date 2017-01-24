@@ -7,7 +7,6 @@ import gc
 from UserController import UserController
 
 
-
 app = Flask(__name__)
 
 
@@ -42,6 +41,5 @@ def item():
       # show the form, it wasn't submitted
     return render_template('index.html')
         
-
 if __name__ == "__main__":
     app.run()
