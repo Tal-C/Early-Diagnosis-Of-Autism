@@ -5,6 +5,10 @@ class UserController():
     def __init__(self):
         return
 
+    def add_user(username, password):
+        params = (username, password)
+        MySQLConnector.ExecuteAddUserParams(params)
+
     def login_page(userName,password):
         ##reg exp
         ##send to MySQLConnector
