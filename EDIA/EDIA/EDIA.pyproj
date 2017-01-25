@@ -185,6 +185,9 @@
     <Content Include="FlaskApp\templates\popup.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlaskApp\insertUser.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FlaskApp\MySQLConnector.py">
       <SubType>Code</SubType>
     </Compile>

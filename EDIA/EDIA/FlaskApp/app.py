@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    UserController.add_user('Gal', '12345')
+    UserController.insert_user('Gal', '123')
     return render_template('index.html')
 
 @app.route('/item.html', methods=['GET', 'POST'])

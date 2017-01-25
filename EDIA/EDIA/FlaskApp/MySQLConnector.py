@@ -1,30 +1,10 @@
 ﻿#from students_dbconfig import read_db_config
-
 import pymysql
-
 
 class MySQLConnector():
 
     def __init__(self):
         return
-
-    def ExecuteAddUserParams(params):
-        try:
-            print("Connecting to MySQL...")
-            conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='Squ135vfe!@#', db='edoa')
-            cursor = conn.cursor()
-            print("Connection succeed...")
-
-            cursor.execute("select distinct edoa from tb_users order by 1")
-            print("Tal Sratim")
-            
-        except:
-            print("Error at connection")
-
-        finally:
-            conn.commit()
-            conn.close()
-            print('Connection closed.')
 
     def ExecuteSPParams(stored_proc, params):
         try:
