@@ -2,6 +2,7 @@
 import requests
 import gc
 from UserController import UserController
+import sys
 
 app = Flask(__name__)
 
@@ -22,16 +23,15 @@ def item():
             else:
                 print("userName = ", attempted_username)
                 print("Password = ", attempted_password)
-            resp = UserController.login_page(attempted_username,attempted_password)
-            if resp == 0:
-                print("You are now logged in!")
-                return render_template("item.html")
-            else:
-                error = "Invalid credetials,try again .!. "
-                print(error)
-                return main()
-                #return render_template("index.html",error = error)
-            gc.collect()
+                resp = UserController.login_page(attempted_username,attempted_password)
+                if resp == 0:
+                    print("You are now logged in!")
+                    return render_template("item.html")
+                else:
+                    error = "Invalid credetials,try again .!. "
+                    print(error)
+                    return render_template("index.html",error = error)
+                gc.collect()
     except Exception as e:
         return render_template("index.html",error = error)
         #return redirect(url_for('item'))
