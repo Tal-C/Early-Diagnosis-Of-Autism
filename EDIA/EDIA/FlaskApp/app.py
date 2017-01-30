@@ -1,15 +1,17 @@
 ﻿from flask import Flask, render_template, url_for,request,redirect
 import requests
-from lxml import html
+#from lxml import html
 import cgi
 from flask.helpers import flash
 import gc
 from UserController import UserController
+import sys
 
 app = Flask(__name__)
 
 @app.route('/')
 def main():
+    print(sys.version)
     return render_template('index.html')
 
 @app.route('/item.html', methods=['GET', 'POST'])
