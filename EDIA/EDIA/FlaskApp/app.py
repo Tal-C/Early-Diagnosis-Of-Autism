@@ -1,7 +1,7 @@
 ﻿from flask import Flask, render_template, url_for,request,redirect
 import requests
-#from lxml import html
-#import cgi
+from lxml import html
+import cgi
 from flask.helpers import flash
 import gc
 from UserController import UserController
@@ -10,7 +10,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    UserController.insert_user('Gal', '123')
     return render_template('index.html')
 
 @app.route('/item.html', methods=['GET', 'POST'])
@@ -41,4 +40,4 @@ def item():
     return render_template('index.html')
         
 if __name__ == "__main__":
-    app.run()
+    app.run(port=2000)
