@@ -17,6 +17,11 @@ def item():
         if request.method == 'POST':
             attempted_username = request.form['user']
             attempted_password = request.form['passw']
+            if attempted_username == '' and attempted_password == '':
+                print("you must sing up")
+            else:
+                print("userName = ", attempted_username)
+                print("Password = ", attempted_password)
             resp = UserController.login_page(attempted_username,attempted_password)
             if resp == 0:
                 print("You are now logged in!")
@@ -32,11 +37,7 @@ def item():
         #return redirect(url_for('item'))
       # show the form, it wasn't submitted
     return render_template('index.html')
-
-
-@app.route('/signup.html', methods=['GET', 'POST'])        
-def signup():
-    return
+        
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=2000)

@@ -1014,6 +1014,7 @@ html head + body .ui-btn.ui-btn-a:visited {
 	border-color:	 		#ddd /*{a-bup-border}*/;
 	color: 					#333 /*{a-bup-color}*/;
 	text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #f3f3f3 /*{a-bup-shadow-color}*/;
+    width: 200px;
 }
 /* Button hover */
 .ui-page-theme-a .ui-btn:hover,
@@ -1668,7 +1669,8 @@ button.ui-btn,
 	box-sizing: border-box;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	width: 100%;
+	width: 12%;
+    margin: 0 auto;
 }
 button.ui-btn-inline,
 .ui-header button.ui-btn,

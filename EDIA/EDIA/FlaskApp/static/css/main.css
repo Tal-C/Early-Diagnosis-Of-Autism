@@ -13,7 +13,6 @@ body {
     font-weight: 300;
     font-size: 16px;
     color: #555;
-
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
@@ -48,7 +47,6 @@ p {
 a {
     color: #f85c37;
     word-wrap: break-word;
-
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
     -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
     -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -90,19 +88,16 @@ a:after {
 	background: url(../img/bg2.png) no-repeat center top;
     opacity: 0.7;
 	margin-top: -10px;
-	padding-top:20px;
-	text-align:center;
+    padding-top: 20px;
+    text-align: center;
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 700px;
 	width: 100%;
-
-	
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -128,18 +123,16 @@ a:after {
 #portfoliowrap {
 	background: url(../img/secong_bg2.jpg) no-repeat center top;
 	margin-top: 0px;
-	padding-top:70px;
-	text-align:center;
+    padding-top: 70px;
+    text-align: center;
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 500px;
 	width: 100%;
-	
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -208,7 +201,7 @@ a:after {
 	background: #2f2f2f;
 	padding-top: 70px;
 	padding-bottom: 70px;
-	text-align: center
+    text-align: center;
 }
 
 #f h3 {
@@ -231,7 +224,7 @@ a:after {
 }
 
 #c p {
-	color: white
+        color: white;
 }
 
 
@@ -240,18 +233,16 @@ a:after {
 #itemwrap {
 	background: url(../img/gb_login4.jpg) no-repeat center top;
 	margin-top: 0px;
-	padding-top:70px;
-	text-align:center;
+    padding-top: 70px;
+    text-align: center;
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 500px;
 	width: 100%;
-	
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -312,8 +303,6 @@ a:after {
 
 .menu-wrap {
     /*background-color:;*/
-    
-    
 	position: absolute;
 	top: 0;
 	left: 60px;
@@ -476,7 +465,6 @@ a:after {
 	cursor: pointer;
 	color: white;
 	background-color: #16a085;
-	
 }
 
 .wrapper {
@@ -487,7 +475,6 @@ a:after {
 
 .team {
 	padding-top: 20px;
-    
 }
 
 .team:hover {
@@ -509,46 +496,52 @@ a:after {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2');
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2')";
     background: linear-gradient(#ffffff, #f2f2f2);
-
-    color:#000;
-    overflow:hidden;
+    color: #000;
+    overflow: hidden;
 }
+
 #upload_form {
-    float:left;
-    padding:20px;
-    width:700px;
+    float: left;
+    padding: 20px;
+    width: 700px;
 }
-#preview {
-    background-color:#fff;
-    display:block;
-    float:right;
-    width:200px;
-}
-#upload_form > div {
-    margin-bottom:10px;
-}
-#speed,#remaining {
-    float:left;
-    width:100px;
-}
-#b_transfered {
-    float:right;
-    text-align:right;
-}
-.clear_both {
-    clear:both;
-}
-input {
-    border-radius:10px;
-    -moz-border-radius:10px;
-    -ms-border-radius:10px;
-    -o-border-radius:10px;
-    -webkit-border-radius:10px;
 
-    border:1px solid #ccc;
-    font-size:14pt;
-    padding:5px 10px;
+#preview {
+    background-color: #fff;
+    display: block;
+    float: right;
+    width: 200px;
 }
+
+#upload_form > div {
+    margin-bottom: 10px;
+}
+
+#speed, #remaining {
+    float: left;
+    width: 100px;
+}
+
+#b_transfered {
+    float: right;
+    text-align: right;
+}
+
+.clear_both {
+    clear: both;
+}
+
+input {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14pt;
+    padding: 5px 10px;
+}
+
 input[type=button] {
     background: -moz-linear-gradient(#ffffff, #dfdfdf);
     background: -ms-linear-gradient(#ffffff, #dfdfdf);
@@ -559,31 +552,33 @@ input[type=button] {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dfdfdf')";
     background: linear-gradient(#ffffff, #dfdfdf);
 }
+
 #image_file {
-    width:400px;
+    width: 400px;
 }
+
 #progress_info {
-    font-size:10pt;
+    font-size: 10pt;
 }
-#fileinfo,#error,#error2,#abort,#warnsize {
-    color:#aaa;
-    display:none;
-    font-size:10pt;
-    font-style:italic;
-    margin-top:10px;
+
+#fileinfo, #error, #error2, #abort, #warnsize {
+    color: #aaa;
+    display: none;
+    font-size: 10pt;
+    font-style: italic;
+    margin-top: 10px;
 }
+
 #progress {
-    border:1px solid #ccc;
-    display:none;
-    float:left;
-    height:14px;
-
-    border-radius:10px;
-    -moz-border-radius:10px;
-    -ms-border-radius:10px;
-    -o-border-radius:10px;
-    -webkit-border-radius:10px;
-
+    border: 1px solid #ccc;
+    display: none;
+    float: left;
+    height: 14px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
     background: -moz-linear-gradient(#66cc00, #4b9500);
     background: -ms-linear-gradient(#66cc00, #4b9500);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66cc00), color-stop(100%, #4b9500));
@@ -593,22 +588,22 @@ input[type=button] {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#66cc00', endColorstr='#4b9500')";
     background: linear-gradient(#66cc00, #4b9500);
 }
+
 #progress_percent {
-    float:right;
+    float: right;
 }
+
 #upload_response {
     margin-top: 10px;
     padding: 20px;
     overflow: hidden;
     display: none;
     border: 1px solid #ccc;
-
-    border-radius:10px;
-    -moz-border-radius:10px;
-    -ms-border-radius:10px;
-    -o-border-radius:10px;
-    -webkit-border-radius:10px;
-
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
     box-shadow: 0 0 5px #ccc;
     background: -moz-linear-gradient(#bbb, #eee);
     background: -ms-linear-gradient(#bbb, #eee);
@@ -618,4 +613,95 @@ input[type=button] {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee');
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee')";
     background: linear-gradient(#bbb, #eee);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #8080ff;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #8080ff;
+    color: white;
+}
+
+form {
+    display: inline-block;
+    text-align: center;
 }
