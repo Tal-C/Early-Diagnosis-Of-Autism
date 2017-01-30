@@ -21,6 +21,7 @@ def signin():
             attempted_password = request.form['passw']
             if attempted_username == '' and attempted_password == '':
                 print("you must sing up")
+                return render_template('index.html')
             else:
                 print(str(attempted_password))
                 resp = UserController.login_page(str(attempted_username),str(attempted_password))
@@ -38,6 +39,7 @@ def signin():
 
 @app.route('/buildRequest', methods=['GET', 'POST'])
 def buildRequest():
+    #Integration
     print("Hello to build Request")
     return render_template('index.html')
         
