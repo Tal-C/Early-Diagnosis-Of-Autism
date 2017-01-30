@@ -11,7 +11,6 @@ app = Flask(__name__)
 def main():
     return render_template('index.html')
 
-#@app.route('/item.html', methods=['GET', 'POST'])
 @app.route('/item.html', methods=['GET', 'POST'])
 def item():
     error = ''
@@ -33,10 +32,10 @@ def item():
                 gc.collect()
     except Exception as e:
         return render_template("index.html",error = error)
-        #return redirect(url_for('item'))
+        return redirect(url_for('item'))
       # show the form, it wasn't submitted
     return render_template('index.html')
         
 
 if __name__ == "__main__":
-    app.run(port=2000)
+    app.run()
