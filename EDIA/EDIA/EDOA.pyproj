@@ -202,9 +202,6 @@
     <Compile Include="FlaskApp\app.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="FlaskApp\students_dbconfig.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="FlaskApp\User.py">
       <SubType>Code</SubType>
     </Compile>
