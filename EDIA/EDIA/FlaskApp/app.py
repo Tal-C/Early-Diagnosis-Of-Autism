@@ -11,6 +11,7 @@ app = Flask(__name__)
 def main():
     return render_template('index.html')
 
+
 @app.route('/item.html', methods=['GET', 'POST'])
 def item():
     error = ''
