@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/jquery.mobile-1.4.5.css')}}">
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/Chart.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
     <script src="{{url_for('static',filename='js/jquery-1.10.2.js')}}"></script>
     <script src="{{url_for('static',filename='js/jquery.mobile-1.4.5.js')}}"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -71,7 +70,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>
-                        Autism is a neurological disorder that causes communication and socialize difficulties with others.
+                         Autism is a neurological disorder that causes communication and socialize difficulties with others.
                         <bold> Autistic children usually speak little, ignore others and come back again and again on the actions and behaviors such as spin in circles or focus on a particular object of hours.</bold> They excel in activities that require attention to the details, such as spelling or instruments but are upset when they are faced with a whole world of life <br />
                     </h3>
                 </div>
@@ -87,7 +86,7 @@
                 <div class="ui-content">
                     <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Login</a>
                     <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
-                        <form method="post" action="{{url_for('item')}}">
+                        <form method="post" action="{{url_for('index')}}">
                             <div>
                                 <h3><b>Welcome</b></h3>
                                 <label for="usrnm" class="ui-hidden-accessible">User Name:</label>
@@ -202,12 +201,12 @@
                                                         <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">It is possible to add a comment if needed. The field is optional</textarea>
                                                     </div>
                                                 </div>
-                                            </div>
+                            </div>
 
                                             <button type="submit" class="btn btn-info btn-fill pull-right">Submit a request</button>
 
                                             <!--   <div class="clearfix"></div>-->
-                                        </form>
+                        </form>
 
                                     </div>
                                 </div>
@@ -219,6 +218,7 @@
 
                     </div>
                 </div>
+
             </div>
 
 

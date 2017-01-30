@@ -1,4 +1,4 @@
-class User():
+﻿class User():
     def __init__(self, row):
         self.user_name = row[1]
         self.password = row[2]
