@@ -39,12 +39,12 @@ def signin():
 @app.route('/buildRequest', methods=['GET', 'POST'])
 def buildRequest():
     print("Hello to build Request")
-    return render_template('index.html') 
-       
+    return render_template('index.html')
+        
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     print("Hello Sign Up")
     return render_template('item.html')
 
 if __name__ == "__main__":
-    app.run(port=2000)
+    app.run()

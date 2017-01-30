@@ -44,9 +44,3 @@ class MySQLConnector():
         finally:
             cnx.close()
             print('Connection closed.')
-
-
-
-
-
-
