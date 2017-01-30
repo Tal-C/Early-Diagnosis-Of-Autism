@@ -190,10 +190,37 @@
     <Content Include="FlaskApp\templates\popup.html" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FlaskApp\appTest.py">
+    <Compile Include="FlaskApp\CascadeDictionary.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\dbconfig.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\Eye.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\Face.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\FaceOrgan.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\ImageAnalizer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\Main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\Mouth.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskApp\MySQLConnector.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\Nose.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\OrgansTracker.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskApp\UserController.py">
@@ -206,6 +233,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskApp\socket.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\VideoAnalizer.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
