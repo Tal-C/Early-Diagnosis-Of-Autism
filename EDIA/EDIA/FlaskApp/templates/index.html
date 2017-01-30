@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>
-                         Autism is a neurological disorder that causes communication and socialize difficulties with others.
+                        Autism is a neurological disorder that causes communication and socialize difficulties with others.
                         <bold> Autistic children usually speak little, ignore others and come back again and again on the actions and behaviors such as spin in circles or focus on a particular object of hours.</bold> They excel in activities that require attention to the details, such as spelling or instruments but are upset when they are faced with a whole world of life <br />
                     </h3>
                 </div>
@@ -86,7 +86,7 @@
                 <div class="ui-content">
                     <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Login</a>
                     <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
-                        <form method="post" action="{{url_for('index')}}">
+                        <form method="post" action="{{url_for('signin')}}">
                             <div>
                                 <h3><b>Welcome</b></h3>
                                 <label for="usrnm" class="ui-hidden-accessible">User Name:</label>
@@ -100,30 +100,20 @@
                         </form>
                     </div>
                 </div>
+                <!---#######################################################################################################-->
+                <!--SignUp-->
                 <div class="col-sm-1-offset-4">
                     <!-- Trigger/Open The Modal -->
                     <h3><b>Sign Up</b></h3>
                     <button id="signup">Sign Up</button>
-
                     <!-- The Modal -->
                     <div id="myModal" class="modal">
-
                         <!-- Modal content -->
                         <div class="modal-content">
                             <div class="modal-header">
                                 <span class="close">&times;</span>
                                 <h3><b>Application form</b></h3>
                             </div>
-                            <!--<div class="modal-body">
-                                <label for="usrnm" class="ui-hidden-accessible">User Name:</label>
-                                <input type="text" name="user" id="usrnm" placeholder="User Name">
-                                <label for="pswd" class="ui-hidden-accessible">Password:</label>
-                                <input type="password" name="passw" id="pswd" placeholder="Password">
-                                <label for="usrnm" class="ui-hidden-accessible">User Name:</label>
-                                <input type="text" name="user" id="usrnm" placeholder="User Name">
-                                <label for="usrnm" class="ui-hidden-accessible">User Name:</label>
-                                <input type="text" name="user" id="usrnm" placeholder="User Name">
-                            </div>-->
                             <div class="row">
                                 <div class="card">
                                     <div class="header">
@@ -131,7 +121,7 @@
                                         <br />
                                     </div>
                                     <div class="content">
-                                        <form>
+                                        <form method="post" action="{{url_for('signup')}}">
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
@@ -201,12 +191,12 @@
                                                         <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">It is possible to add a comment if needed. The field is optional</textarea>
                                                     </div>
                                                 </div>
-                            </div>
+                                            </div>
 
                                             <button type="submit" class="btn btn-info btn-fill pull-right">Submit a request</button>
 
                                             <!--   <div class="clearfix"></div>-->
-                        </form>
+                                        </form>
 
                                     </div>
                                 </div>
@@ -221,9 +211,10 @@
 
             </div>
 
-
         </div><!-- /container -->
     </div><!-- /g -->
+
+
     <!-- ========== CHARTS - DARK GREY SECTION ========== -->
     <section id="portfolio" name="portfolio"></section>
     <div id="portfoliowrap">

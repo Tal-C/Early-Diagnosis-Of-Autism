@@ -12,8 +12,8 @@ def main():
     return render_template('index.html')
 
 
-@app.route('/item.html', methods=['GET', 'POST'])
-def item():
+@app.route('/signin', methods=['GET', 'POST'])
+def signin():
     error = ''
     try:
         if request.method == 'POST':
@@ -22,7 +22,8 @@ def item():
             if attempted_username == '' and attempted_password == '':
                 print("you must sing up")
             else:
-                resp = UserController.login_page(attempted_username,attempted_password)
+                print(str(attempted_password))
+                resp = UserController.login_page(str(attempted_username),str(attempted_password))
                 if resp == 0:
                     print("You are now logged in!")
                     return render_template("item.html")
@@ -32,11 +33,18 @@ def item():
                     return render_template("index.html",error = error)
                 gc.collect()
     except Exception as e:
-        return render_template("index.html",error = error)
-        #return redirect(url_for('item'))
-      # show the form, it wasn't submitted
+        return render_template("item.html",error = error)
     return render_template('index.html')
-        
+
+@app.route('/buildRequest', methods=['GET', 'POST'])
+def buildRequest():
+    print("Hello to build Request")
+    return render_template('index.html') 
+       
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    print("Hello Sign Up")
+    return render_template('item.html')
 
 if __name__ == "__main__":
     app.run(port=2000)

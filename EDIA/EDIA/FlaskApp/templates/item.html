@@ -127,19 +127,18 @@
                 <!--====================================================================================-->
                 <div class="card">
                     <div class="header">
-                        <h4 class="title"><b>Application form</b></h4>
+                        <h4 class="title"><b>Your request</b></h4>
                     </div>
                     <div class="content">
-                        <form>
+                        <form method="post" action="{{url_for('buildRequest')}}">
                             <div class="row">
-
-                                <div class="col-md-4">
+                                <div class="col-md-8">
                                     <div class="form-group">
                                         <label><b>User name</b></label>
                                         <input type="text" class="form-control" disabled placeholder="User name" value="tal&katia">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email</label>
                                         <input type="email" class="form-control" disabled placeholder="tal_katia@email.com">
@@ -148,7 +147,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-8">
                                     <div class="form-group">
                                         <label><b>First name:</b></label>
                                         <input type="text" class="form-control" placeholder="First Name" value="דוד">
@@ -234,15 +233,16 @@
                                 </div>
                                 <!--------------------------------------------------------------------->
                             </div>
-                                <button type="submit" class="btn btn-info btn-fill pull-right">Submit a request</button>
-                               
-                                <!--   <div class="clearfix"></div>-->
-</form>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Submit a request</button>
+
+                            <!--   <div class="clearfix"></div>-->
+                        </form>
                     </div>
                 </div>
                 <!--====================================================================================-->
             </div>
         </div>
+
     </div><!-- /dg -->
     <!-- ========== FOOTER SECTION ========== -->
     <section id="contact" name="contact"></section>

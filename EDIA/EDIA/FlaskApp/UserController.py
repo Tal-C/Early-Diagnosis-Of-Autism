@@ -1,8 +1,6 @@
 ﻿from MySQLConnector import MySQLConnector
 import re
 
-
-
 class UserController():
 
     def __init__(self):
