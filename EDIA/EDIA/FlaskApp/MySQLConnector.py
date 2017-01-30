@@ -1,4 +1,4 @@
-﻿from students_dbconfig import read_db_config
+﻿from dbconfig import read_db_config
 import pymysql
 
 class MySQLConnector():

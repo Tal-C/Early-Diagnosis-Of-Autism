@@ -1,6 +1,6 @@
 from VideoAnalizer import VideoAnalizer
 from VideoAnalizer import camera_capture
-#import cv2
+import cv2
 import time
 
 class Main(object):
