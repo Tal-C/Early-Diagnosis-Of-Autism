@@ -7,7 +7,7 @@
     <ProjectGuid>157de693-197b-4cf9-81f9-36d5d676a767</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>FlaskApp\app.py</StartupFile>
+    <StartupFile>FlaskApp\appTest.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -74,6 +74,10 @@
     <Content Include="FlaskApp\static\img\bg2.png" />
     <Content Include="FlaskApp\static\img\bg_login2.jpg" />
     <Content Include="FlaskApp\static\img\bg_login3.jpg" />
+    <Content Include="FlaskApp\static\img\Bubbles.png" />
+    <Content Include="FlaskApp\static\img\Bubbles2.png" />
+    <Content Include="FlaskApp\static\img\Bubbles3.png" />
+    <Content Include="FlaskApp\static\img\Bubbles4.png" />
     <Content Include="FlaskApp\static\img\cloud03.jpg" />
     <Content Include="FlaskApp\static\img\default-avatar.png" />
     <Content Include="FlaskApp\static\img\faces\face-0.jpg" />
@@ -181,6 +185,9 @@
     <Content Include="FlaskApp\templates\item.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlaskApp\appTest.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FlaskApp\MySQLConnector.py">
       <SubType>Code</SubType>
     </Compile>

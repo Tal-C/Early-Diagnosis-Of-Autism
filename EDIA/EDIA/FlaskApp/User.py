@@ -1,3 +1,5 @@
-class User():
-    def __init__(self,firstName,lastName,email,password, ):
-        self.name = firstName
+﻿class User():
+    def __init__(self,row):
+        self.name = row[1]
+            
+

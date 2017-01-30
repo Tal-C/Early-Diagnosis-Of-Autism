@@ -1,5 +1,4 @@
-﻿#from students_dbconfig import read_db_config
-
+﻿from students_dbconfig import read_db_config
 import pymysql
 
 class MySQLConnector():
@@ -7,41 +6,40 @@ class MySQLConnector():
     def __init__(self):
         return
 
-    def ExecuteSPParams(stored_proc,params):
+   
+    def ExecuteSP_Params(stored_proc,params):
         try:
-            print("Connecting to MySQL...")
-            cnx = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='1Qwertyuiop-', db='edoa')
+            db_config = read_db_config()
+            db_config = read_db_config()
+            cnx = pymysql.connect(host=db_config['host'], port=int(db_config['port']),
+                                  user=db_config['user'], passwd=db_config['password'], db=db_config['database'])
             curr = cnx.cursor()
-            print("Connection succeed...")
             curr.callproc(stored_proc,params)
             for i in range(0,len(curr._rows)):
                 print(curr._rows[i])    
             return curr._rows
         except:
             print("Error at connection")
-
+            if(cnx == None):
+                return None
         finally:
             cnx.close()
-            print('Connection closed.')
+            
 
     def ExecuteSP(stored_proc):
         try:
-            print("Connecting to MySQL...")
-            cnx = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='1Qwertyuiop-', db='edoa')
+            cnx = None
+            db_config = read_db_config()
+            cnx = pymysql.connect(host=db_config['host'], port=int(db_config['port']),
+                                  user=db_config['user'], passwd=db_config['password'], db=db_config['database'])
             curr = cnx.cursor()
-            print("Connection succeed...")
             curr.callproc(stored_proc)
             for i in range(0,len(curr._rows)):
                 print(curr._rows[i])    
             return curr._rows
         except:
             print("Error at connection")
+            if(cnx == None):
+                return None
         finally:
             cnx.close()
-            print('Connection closed.')
-
-
-
-
-
-

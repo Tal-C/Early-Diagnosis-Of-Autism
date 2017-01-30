@@ -1,5 +1,6 @@
 ﻿from flask import Flask, render_template, url_for,request,redirect
 import requests
+from flask.helpers import flash
 import gc
 from UserController import UserController
 
@@ -9,9 +10,15 @@ app = Flask(__name__)
 def main():
     return render_template('index.html')
 
+def get_data():
+    response = requests.get("http://localhost:5000")
+    print("*************************************************\n",response)
+    print("**************************************************")
+    return response
+
 #@app.route('/item.html', methods=['GET', 'POST'])
-@app.route('/item.html', methods=['GET', 'POST'])
-def item():
+@app.route('/', methods=['GET', 'POST'])
+def index():
     error = ''
     try:
         if request.method == 'POST':
@@ -24,11 +31,11 @@ def item():
             else:
                 error = "Invalid credetials,try again .!. "
                 print(error)
-                return main()
-                #return render_template("index.html",error = error)
+                return render_template("index.html",response = get_data())
             gc.collect()
     except Exception as e:
-        return render_template("index.html",error = error)
+        print(e)
+        return render_template("index.html")
         #return redirect(url_for('item'))
       # show the form, it wasn't submitted
     return render_template('index.html')
