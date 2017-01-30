@@ -22,8 +22,6 @@ def item():
             if attempted_username == '' and attempted_password == '':
                 print("you must sing up")
             else:
-                print("userName = ", attempted_username)
-                print("Password = ", attempted_password)
                 resp = UserController.login_page(attempted_username,attempted_password)
                 if resp == 0:
                     print("You are now logged in!")
