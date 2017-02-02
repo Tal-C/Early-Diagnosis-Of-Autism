@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ url_for('static', filename='img/logo_trans.png') }} " type="image/png" />
+    <title>EDOA - Early Diagnosis Of Autism</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet">
+    <!--regsth-->
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static',filename='css/main.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.min.css')}}">
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/Chart.js')}}"></script>
+    <script src="{{url_for('static',filename='js/modernizr.custom.js')}}"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#theMenu">
+
+    <!-- Menu -->
+    <nav class="menu" id="theMenu" method="post">
+        <div class="menu-wrap">
+            <img src="{{url_for('static', filename='img/logo.png')}} " />
+            <i class="icon-remove menu-close"></i>
+            <a href="#guidelines" class="smoothScroll">Guidelines page</a>
+            <a href="#request" class="smoothScroll">Application form</a>
+            <a href="{{url_for('logout')}}" class="smoothScroll">Log out</a>
+            <a href="#contact" class="smoothScroll">Contact</a>
+            <a href="#"><i class="icon-facebook"></i></a>
+            <a href="#"><i class="icon-twitter"></i></a>
+            <a href="#"><i class="icon-dribbble"></i></a>
+            <a href="#"><i class="icon-envelope"></i></a>
+        </div>
+
+        <!-- Menu button -->
+        <div id="menuToggle"><i class="icon-reorder"></i></div>
+    </nav>
+
+
+    <!-- ========== HEADER SECTION ========== -->
+    <div id="itemwrap">
+        <div class="container">
+            <br>
+            <h1>EDOA</h1>
+            <h2>Early Diagnosis Of Autism</h2>
+
+            {% for i in range(0,signin.shape[0]) %}
+            <h3>Welcome {{ signin[i][4] }}  {{ signin[i][5] }} !</h3>
+
+            {% endfor %}
+
+            <div class="row">
+                <br>
+                <br>
+                <br>
+                <div class="col-lg-6 col-lg-offset-3">
+                </div>
+            </div>
+        </div><!-- /container -->
+    </div><!-- /headerwrap -->
+    <!-- ========== WHITE SECTION ========== -->
+    <div id="w">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>
+                        Autism is a neurological disorder that causes communication difficulties and difficulties socialize with others.
+                        <bold>Autistic children usually speak little, ignore others and come back again and again on the actions and behaviors such as spin in circles or focus on a particular object of hours. </bold> They excel in activities that require attention to the details, such as spelling or instruments but are upset when they are faced with a whole world of life<br />
+                    </h3>
+                </div>
+            </div>
+        </div><!-- /container -->
+    </div><!-- /w -->
+    <!-- ========== SERVICES - GREY SECTION ========== -->
+    <section id="guidelines" name="guidelines"></section>
+    <div id="g">
+        <div class="container">
+            <div class="row">
+                <h3>Guidelines photography</h3>
+                <br>
+                <br>
+                <h4>Click on the icon to download the guidelines</h4>
+                <a href="{{url_for('static', filename='pdf/project.pdf')}}" download>
+                    <img border="0" src="{{url_for('static', filename='img/logo_trans.png')}}" width="104" height="142">
+                </a>
+            </div>
+        </div><!-- /container -->
+    </div><!-- /g -->
+    <!-- ========== CAROUSEL / DESCRIPTION - DARK GREY SECTION ========== -->
+    <section id="request" name="request"></section>
+    <div id="dg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div id="carousel-example-generic" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="{{url_for('static',filename='img/autism.png')}}" alt=" ">
+                            </div>
+                            <div class="item">
+                                <img src="{{url_for('static',filename='img/autism2.png')}}" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div><!-- /container -->
+
+        <div class="container">
+            <div class="row">
+                <!--==============================================New======================================-->
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title"><b>Your request</b></h4>
+                    </div>
+                    <div class="content">
+                        <form method="post" action="{{url_for('buildRequest')}}">
+                            {% for i in range(0,signin.shape[0]) %}
+                            
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label><b>User name</b></label>
+                                        <input type="text" class="form-control" disabled placeholder="User name" value="{{ signin[i][1] }}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input type="email" class="form-control" disabled placeholder="{{ signin[i][3] }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label><b>First name:</b></label>
+                                        <input type="text" class="form-control" placeholder="First Name" value="{{ signin[i][4] }}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label><b>Last name:</b></label>
+                                        <input type="text" class="form-control" placeholder="Last Name" value="{{ signin[i][5] }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label><b>Address</b></label>
+                                        <input type="text" class="form-control" value="{{ signin[i][6] }}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label><b>Phone</b></label>
+                                        <input type="text" class="form-control" value="{{ signin[i][8] }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label><b>City</b></label>
+                                        <input type="text" class="form-control" value="{{ signin[i][7] }}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>ZIP code</label>
+                                        <input type="text" class="form-control" value="{{ signin[i][9] }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Comments</label>
+                                        <textarea rows="5" class="form-control" value="{{ signin[i][10] }}"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            {% endfor %}
+                            <div class="row">
+                                <!--------------------------------------------------------------------->
+                                <div>
+                                    <div><label for="image_file">Here you can select and upload the video you want</label></div>
+                                    <div><input type="file" name="video" id="video_file" onchange="fileSelected();" /></div>
+                                </div>
+                                <div>
+                                    <input type="button" value="Upload video" onclick="startUploading()" />
+                                </div>
+                                <div id="fileinfo">
+                                    <div id="filename"></div>
+                                    <div id="filesize"></div>
+                                    <div id="filetype"></div>
+                                    <div id="filedim"></div>
+                                </div>
+                                <div id="error">You should select valid image files only!</div>
+                                <div id="error2">An error occurred while uploading the file</div>
+                                <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
+                                <div id="warnsize">Your file is very big. We can't accept it. Please select more small file</div>
+                                <div id="progress_info">
+                                    <div id="progress"></div>
+                                    <div id="progress_percent">&nbsp;</div>
+                                    <div class="clear_both"></div>
+                                    <div>
+                                        <div id="speed">&nbsp;</div>
+                                        <div id="remaining">&nbsp;</div>
+                                        <div id="b_transfered">&nbsp;</div>
+                                        <div class="clear_both"></div>
+                                    </div>
+                                    <div id="upload_response"></div>
+                                </div>
+                                <!--------------------------------------------------------------------->
+                            </div>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Submit a request</button>
+
+                            <!--   <div class="clearfix"></div>-->
+                        </form>
+                    </div>
+                </div>
+                <!--====================================================================================-->
+            </div>
+        </div>
+
+    </div><!-- /dg -->
+    <!-- ========== FOOTER SECTION ========== -->
+    <section id="contact" name="contact"></section>
+    <div id="f">
+        <div class="container">
+            <div class="row">
+                <h3><b>CONTACT US</b></h3>
+                <br>
+                <div class="col-lg-4">
+                    <h3><b>Send Us A Message:</b></h3>
+                    <h3><i class="icon-envelope"></i> tal3433@gmail.com</h3>
+                    <h3><i class="icon-envelope"></i>katiapr89@gmail.com</h3>
+                    <br>
+                </div>
+
+                <div class="col-lg-4">
+                    <h3><b>Call Us:</b></h3>
+                    <h3>+972 524837638</h3>
+                    <h3>+972 545592596</h3>
+                    <br>
+                </div>
+
+                <div class="col-lg-4">
+                    <h3><b>We Are Social</b></h3>
+                    <p>
+                        <a href="index.html#"><i class="icon-facebook"></i></a>
+                        <a href="index.html#"><i class="icon-twitter"></i></a>
+                        <a href="index.html#"><i class="icon-envelope"></i></a>
+                    </p>
+                    <br>
+                </div>
+            </div>
+
+        </div><!-- /container -->
+    </div><!-- /f -->
+
+    <div id="c">
+        <div class="container">
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{url_for('static',filename='js/classie.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 3500
+        })
+    </script>
+</body>
+</html>
