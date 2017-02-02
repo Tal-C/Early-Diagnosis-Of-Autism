@@ -188,3 +188,13 @@ function uploadAbort(e) { // upload abort
     document.getElementById('abort').style.display = 'block';
     clearInterval(oTimer);
 }
+//-----------PopUp - Func ----------------
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

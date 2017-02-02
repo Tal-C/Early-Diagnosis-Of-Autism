@@ -1,13 +1,13 @@
 ﻿from dbconfig import read_db_config
 import pymysql
 
-class MySQLConnector():
+class MySQL_Connector():
 
     def __init__(self):
         return
 
    
-    def ExecuteSP_Params(stored_proc,params):
+    def ExecuteSP_Params(self,stored_proc,params):
         try:
             db_config = read_db_config()
             db_config = read_db_config()
@@ -18,7 +18,7 @@ class MySQLConnector():
             for i in range(0,len(curr._rows)):
                 print(curr._rows[i])    
             return curr._rows
-        except:
+        except Exception as e:
             print("Error at connection")
             if(cnx == None):
                 return None

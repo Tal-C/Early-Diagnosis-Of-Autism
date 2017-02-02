@@ -8,7 +8,7 @@
     <ProjectHome>
     </ProjectHome>
     <ProjectTypeGuids>{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>FlaskApp\app.py</StartupFile>
+    <StartupFile>FlaskApp\StartUp.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -120,7 +120,6 @@
     <Content Include="FlaskApp\static\img\work1.png" />
     <Content Include="FlaskApp\static\img\work2.png" />
     <Content Include="FlaskApp\static\js\jquery-1.11.3.min.js" />
-    <Content Include="FlaskApp\static\js\jquery.mobile-1.4.5.js" />
     <Content Include="FlaskApp\static\js\work3.png" />
     <Content Include="FlaskApp\static\js\bootstrap-checkbox-radio-switch.js" />
     <Content Include="FlaskApp\static\js\bootstrap-notify.js" />
@@ -182,9 +181,9 @@
     <Content Include="FlaskApp\static\saas\lbd\_typography.scss" />
     <Content Include="FlaskApp\static\saas\lbd\_variables.scss" />
     <Content Include="FlaskApp\static\saas\light-bootstrap-dashboard.scss" />
+    <Content Include="FlaskApp\templates\expert.html" />
     <Content Include="FlaskApp\templates\index.html" />
-    <Content Include="FlaskApp\templates\item.html" />
-    <Content Include="FlaskApp\templates\popup.html" />
+    <Content Include="FlaskApp\templates\signin.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FlaskApp\CascadeDictionary.py">
@@ -220,10 +219,13 @@
     <Compile Include="FlaskApp\OrgansTracker.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FlaskApp\Run.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FlaskApp\UserController.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="FlaskApp\app.py">
+    <Compile Include="FlaskApp\StartUp.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskApp\User.py">

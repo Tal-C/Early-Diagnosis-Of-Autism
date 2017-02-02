@@ -32,9 +32,9 @@
         <div class="menu-wrap">
             <img src="{{url_for('static', filename='img/logo.png')}} " />
             <i class="icon-remove menu-close"></i>
-            <a href="#guidelines" class="smoothScroll">Guidelines page</a>
-            <a href="#request" class="smoothScroll">Application form</a>
-            <a href="#portfolio" class="smoothScroll">Lof off</a>
+            <a href="#showall" class="smoothScroll">Show All</a>
+            <a href="#search" class="smoothScroll">Search</a>
+            <a href="{{url_for('logout')}}" class="smoothScroll">Log out</a>
             <a href="#contact" class="smoothScroll">Contact</a>
             <a href="#"><i class="icon-facebook"></i></a>
             <a href="#"><i class="icon-twitter"></i></a>
@@ -53,7 +53,8 @@
             <br>
             <h1>EDOA</h1>
             <h2>Early Diagnosis Of Autism</h2>
-            <h3>Welcome</h3>
+            {% for d in result.iteritems() %}
+            <h3>Welcome {{ name }}</h3>
             <div class="row">
                 <br>
                 <br>
@@ -69,7 +70,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>
-                         Autism is a neurological disorder that causes communication difficulties and difficulties socialize with others.
+                        Autism is a neurological disorder that causes communication difficulties and difficulties socialize with others.
                         <bold>Autistic children usually speak little, ignore others and come back again and again on the actions and behaviors such as spin in circles or focus on a particular object of hours. </bold> They excel in activities that require attention to the details, such as spelling or instruments but are upset when they are faced with a whole world of life<br />
                     </h3>
                 </div>
@@ -281,8 +282,6 @@
 
     <div id="c">
         <div class="container">
-            <p>Created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>
-
         </div>
     </div>
 

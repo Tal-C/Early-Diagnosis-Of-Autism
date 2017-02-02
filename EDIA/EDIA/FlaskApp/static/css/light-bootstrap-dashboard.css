@@ -597,6 +597,8 @@ body > .navbar-collapse[data-color="purple"]:after {
 .btn-info {
   border-color: #1DC7EA;
   color: #1DC7EA;
+   /*color: #FB404B;*/
+  
 }
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
   background-color: transparent;

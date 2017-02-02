@@ -36,7 +36,7 @@
             <img src="{{url_for('static', filename='img/logo.png')}} " />
             <i class="icon-remove menu-close"></i>
             <a href="#home" class="smoothScroll">Home Page</a>
-            <a href="#SignIn" class="smoothScroll">Login</a>
+            <a href="#SignInUp" class="smoothScroll">Login</a>
             <a href="#portfolio" class="smoothScroll">Early Signs</a>
             <a href="#about" class="smoothScroll">About</a>
             <a href="#contact" class="smoothScroll">Conact Us</a>
@@ -70,49 +70,60 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>
-                         Autism is a neurological disorder that causes communication and socialize difficulties with others.
+                        Autism is a neurological disorder that causes communication and socialize difficulties with others.
                         <bold> Autistic children usually speak little, ignore others and come back again and again on the actions and behaviors such as spin in circles or focus on a particular object of hours.</bold> They excel in activities that require attention to the details, such as spelling or instruments but are upset when they are faced with a whole world of life <br />
                     </h3>
                 </div>
             </div>
         </div><!-- /container -->
     </div><!-- /w -->
-    <section id="SignIn" name="services"></section>
+    <section id="SignInUp" name="services"></section>
     <div id="g">
         <div class="container">
             <div class="row">
                 <h3><b>Login</b></h3>
                 <br>
-                <div class="ui-content">
-                    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Login</a>
-                    <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
-                        <form method="post" action="{{url_for('signin')}}">
-                            <div>
-                                <h3><b>Welcome</b></h3>
-                                <label for="usrnm" class="ui-hidden-accessible">User Name:</label>
-                                <input type="text" name="user" id="usrnm" placeholder="User Name">
-                                <label for="pswd" class="ui-hidden-accessible">Password:</label>
-                                <input type="password" name="passw" id="pswd" placeholder="Password">
-                                <label for="log">Remember Me</label>
-                                <input type="checkbox" name="login" id="log" value="1" data-mini="true">
-                                <button id="login">Login</button>
+                <!---#######################################################################################################-->
+                <!---###########################################HERE########################################################-->
+                <button class="btn buttonStyle" onclick="document.getElementById('id01').style.display='block'">Sign In</button>
+                <!-- The Modal -->
+                <div id="id01" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                          class="close" title="Close Modal">&times;</span>
+
+                    <!-- Modal Content -->
+                    <form method="post" class="modal-content" action="{{url_for('signin')}}">
+                        <div class="modal-header">
+                            <h3><b> Welcome back!</b></h3>
+                        </div>
+                        <label><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="user" required>
+
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="passw" required>
+
+                        <button type="submit" class="btn loginSubmit">Login</button>
+                        <div class="modal-footer">
+                            <div class="container">
+                                <button type="button" class="btn loginSubmit" style="position:center" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
+                <!---#######################################################################################################-->
                 <!---#######################################################################################################-->
                 <!--SignUp-->
                 <div class="col-sm-1-offset-4">
                     <!-- Trigger/Open The Modal -->
                     <h3><b>Sign Up</b></h3>
-                    <button id="signup">Sign Up</button>
+                    <button id="signup" class="btn buttonStyle">Sign Up</button>
                     <!-- The Modal -->
                     <div id="myModal" class="modal">
                         <!-- Modal content -->
                         <div class="modal-content">
                             <div class="modal-header">
                                 <span class="close">&times;</span>
-                                <h3><b>Application form</b></h3>
+                                <h3><b>Wellcome</b></h3>
                             </div>
                             <div class="row">
                                 <div class="card">
@@ -123,84 +134,94 @@
                                     <div class="content">
                                         <form method="post" action="{{url_for('signup')}}">
                                             <div class="row">
-                                                <div class="col-md-4">
+                                                <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label><b>User name:</b></label>
-                                                        <input type="text" class="form-control" placeholder="User name" style="width: 470px;" />
+                                                        <label><b><font color="red"><b>*</b></font>User Name:</b></label>
+                                                        <input type="text" name="uname" class="form-control" placeholder="User Name" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="exampleInputEmail1"><b>Email:</b></label>
-                                                        <input type="email" class="form-control" placeholder="Email">
+                                                        <label for="exampleInputEmail1"><b><font color="red"><b>*</b></font>Email:</b></label>
+                                                        <input type="email" name="email" class="form-control" placeholder="Email"required>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label><b>Create Password:</b></label>
-                                                        <input type="text" class="form-control" placeholder="Password">
+                                                        <label><b><font color="red"><b>*</b></font>Create Password:</b></label>
+                                                        <input type="text" name="pswdf" class="form-control" placeholder="Password" required>
                                                         <font size="1"><b>*</b> You must insert at least 6 numbers,<br />one capital letter<br />and lower-case letter</font>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label><b>First Name:</b></label>
-                                                        <input type="text" class="form-control" placeholder="First Name">
-                                                    </div>
+                                                <div class="col-lg-6">
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label><b>Last Name:</b></label>
-                                                        <input type="text" class="form-control" placeholder="Last Name">
+                                                        <label><b><font color="red"><b>*</b></font>Retype Password:</b></label>
+                                                        <input type="text" name="pswds" class="form-control" placeholder="Password" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-4">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label><b><font color="red"><b>*</b></font>First Name:</b></label>
+                                                        <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label><b><font color="red"><b>*</b></font>Last Name:</b></label>
+                                                        <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label><b>Home Address:</b></label>
-                                                        <input type="text" class="form-control" placeholder="Home Address">
+                                                        <input type="text" name="address" class="form-control" placeholder="Home Address">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label><b>Phone Number:</b></label>
-                                                        <input type="text" class="form-control" placeholder="Phone Number">
+                                                        <label><b><font color="red"><b>*</b></font>Phone Number:</b></label>
+                                                        <input type="text" name="number" class="form-control" placeholder="Phone Number" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-4">
+                                                <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label><b>City:</b></label>
-                                                        <input type="text" class="form-control" placeholder="City">
+                                                        <input type="text" name="city" class="form-control" placeholder="City">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label><b>ZIP Code:</b></label>
-                                                        <input type="text" class="form-control" placeholder="ZIP Code">
+                                                        <input type="text" name="zip" class="form-control" placeholder="ZIP Code">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-4">
+                                                <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label><b>Comments:</b></label>
-                                                        <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">It is possible to add a comment if needed. The field is optional</textarea>
+                                                        <textarea rows="5" name="comment" class="form-control" placeholder="Here can be your description" value="Mike"></textarea>
                                                     </div>
                                                 </div>
-                            </div>
-                                            <button type="submit" class="btn btn-info btn-fill pull-right">Submit a request</button>
+                                            </div>
+                                            <button type="submit" class="btn loginSubmit">Submit a request</button>
                                             <!--   <div class="clearfix"></div>-->
-                        </form>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <h3>-</h3>
+                                <h3></h3>
                             </div>
                         </div>
                     </div>
@@ -209,8 +230,6 @@
 
         </div><!-- /container -->
     </div><!-- /g -->
-
-
     <!-- ========== CHARTS - DARK GREY SECTION ========== -->
     <section id="portfolio" name="portfolio"></section>
     <div id="portfoliowrap">
@@ -310,7 +329,6 @@
     </div><!-- /f -->
     <div id="c">
         <div class="container">
-            <p>Created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>
         </div>
     </div>
     <!-- Bootstrap core JavaScript
