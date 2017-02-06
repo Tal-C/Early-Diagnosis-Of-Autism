@@ -221,9 +221,6 @@
     <Compile Include="FlaskApp\OrgansTracker.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="FlaskApp\Run.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="FlaskApp\UserController.py">
       <SubType>Code</SubType>
     </Compile>

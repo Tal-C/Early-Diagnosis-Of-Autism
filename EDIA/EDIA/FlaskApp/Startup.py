@@ -50,7 +50,7 @@ def signin():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
      """ Get user's input of all his data to sign him up.
-     Frist of all chechks two inserted passwords and then go to DataAccess Layer to validate and insert DB
+     First of all chechks two inserted passwords and then go to DataAccess Layer to validate and insert DB
      """
      error = ''
      try:
@@ -88,9 +88,13 @@ def signup():
 @app.route('/buildRequest', methods=['GET', 'POST'])
 def buildRequest():
     #Integration
+    error = ''
+
+    
     """ get the request from client with all data
         and the video, sends the video to VideoController to check validation """
     #get the video
+
     #send the video to VideoController - check the size and qulity of the video and send to Main(video)
     #Main(object)#object = video
   
