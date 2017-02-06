@@ -8,7 +8,7 @@
     <ProjectHome>
     </ProjectHome>
     <ProjectTypeGuids>{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>FlaskApp\StartUp.py</StartupFile>
+    <StartupFile>FlaskApp\Main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -46,9 +46,12 @@
     <Folder Include="FlaskApp\static\img\" />
     <Folder Include="FlaskApp\static\js\" />
     <Folder Include="FlaskApp\static\" />
+    <Folder Include="content\" />
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\Katia.mp4" />
+    <Content Include="content\Roi Video.mp4" />
     <Content Include="FlaskApp\static\css\animate.min.css" />
     <Content Include="FlaskApp\static\css\bootstrap.css" />
     <Content Include="FlaskApp\static\css\bootstrap.min.css" />

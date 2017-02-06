@@ -1,4 +1,4 @@
-import math
+﻿import math
 import cv2
 from CascadeDictionary import d
 from Eye import Eye
@@ -70,7 +70,8 @@ class Face(object):
         eye_rect = self.img[y1:y2, x1:x2]
 
         #eyes1 = d.get('haarcascade_mcs_eyepair_big').detectMultiScale(self.eye_rect, 1.2, 1)
-        eyes = d.get('haarcascade_eye').detectMultiScale(eye_rect, 1.1, 1)
+        eyes_cascade = cv2.CascadeClassifier('C:\Users\Katia\Anaconda3\pkgs\opencv-3.1.0-np111py35_1\Library\etc\haarcascades\haarcascade_frontalface_default.xml')
+        eyes = eyes_cascade.detectMultiScale(eye_rect, 1.1, 1)
         for eye in eyes:
             eye[0] += x1
             eye[1] += y1
@@ -149,9 +150,9 @@ class Face(object):
         # define the nose rectangle
         N = 6
         x1,y1,x2,y2 = self.nose_rect(N) 
-        nose_rect = self.img[y1:y2, x1:x2]     
-
-        noses = d.get('haarcascade_mcs_nose').detectMultiScale(nose_rect, 1.2, 1)
+        nose_rect = self.img[y1:y2, x1:x2]    
+        nose_cascade = cv2.CascadeClassifier('C:\Users\Katia\Anaconda3\pkgs\opencv-3.1.0-np111py35_1\Library\etc\haarcascades\haarcascade_frontalface_default.xml')
+        noses = nose_cascade.detectMultiScale(nose_rect, 1.2, 1)
         distance = self.h
         s = self.w*self.h
         index = 0
@@ -195,7 +196,8 @@ class Face(object):
     def smile_detection(self):
         x1,y1,x2,y2 = self.mouth_rect()
         mouth_rect = self.img[y1:y2, x1:x2]
-        smiles = d.get('haarcascade_smile').detectMultiScale(mouth_rect, 1.1, 4)
+        smile_cascade = face_cascade = cv2.CascadeClassifier('C:\Users\Katia\Anaconda3\pkgs\opencv-3.1.0-np111py35_1\Library\etc\haarcascades\haarcascade_frontalface_default.xml')
+        smiles = smile_cascade.detectMultiScale(mouth_rect, 1.1, 4)
         #mouthes = d.get('haarcascade_mcs_mouth').detectMultiScale(mouth_rect, 1.5, 2)
         i = None
         if len(smiles) != 0:

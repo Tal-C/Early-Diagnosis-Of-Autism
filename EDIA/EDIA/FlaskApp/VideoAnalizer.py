@@ -1,4 +1,4 @@
-import os
+﻿import os
 import cv2
 import numpy as np
 import json
@@ -38,19 +38,22 @@ class VideoAnalizer(object):
     # This function defines the codec and creates VideoWriter object
     def create_video_writer(self, file_name):
         name = os.path.splitext(file_name)[0]                       # define the new video name
-        self.fps = self.cap.get(cv2.cv.CV_CAP_PROP_FPS)             # get video frames-per-second number
-        width = int(self.cap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH))   # get video frames width and height
-        height = int(self.cap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT))
+        self.fps = self.cap.get(cv2.CAP_PROP_FPS)             # get video frames-per-second number
+        width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))   # get video frames width and height
+        height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        
         # if video size is too large
         if width > 640:
             num = float(width)/640
             height = int(height/num)
             width = int(width/num)
+        if(width > height):
+            self.rotate = True
         if self.rotate:
             size = (height,width)                                      # define new video frame size
         else:
             size = (width,height)
-        fourcc = cv2.cv.CV_FOURCC(*'XVID')
+        fourcc = cv2.VideoWriter_fourcc(*'XVID')
         self.out = cv2.VideoWriter("%s_output.avi"%name ,fourcc, self.fps, size)
 
     # This function reads the video frame after frame
@@ -146,8 +149,8 @@ class VideoAnalizer(object):
 # This function captures and saves a video from computer camera, and display it on the screen
 def camera_capture(file_name):
     cap = cv2.VideoCapture(0)
-    width = int(cap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH))   # get video frames width and height
-    height = int(cap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT))
+    width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))   # get video frames width and height
+    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = 30.0
     size = (width,height)
     #Define the codec and create VideoWriter object
