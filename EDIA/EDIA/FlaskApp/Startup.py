@@ -16,7 +16,9 @@ def main():
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     """ get user name and password from sign in fields
-    send them to Controller to validate"""
+    send them to Controller to validate and return SignIn page on success 
+    or back to Index on Fail.
+    Additionally, show the user data on his personal area."""
     error = ''
     try:
         if request.method == 'POST':
@@ -26,18 +28,16 @@ def signin():
             resp = userptr.signin_handler(username,password)
             #Check type of user
             if resp == 404:#User not found
-                print("User not Fount")
-                return render_template("index.html")
+                error = 'Wrong username/password'
+                return render_template("index.html",signin = error)
 
             elif resp == 100:
-                print("Wrong UserName/Password format")
-                return render_template("index.html",signin=resp)
+                error = 'Wrong UserName/Password format'
+                return render_template("index.html",signin = error)
 
             else:#resp = 0 - OK
                 #Insert data to the page Welcome {Name} + Data To the Table
-                data = np.array(resp)
-                print(data)
-                
+                data = np.array(resp)#convert to numpy array
                 return render_template("signin.html",signin=data)
                 
             gc.collect()
@@ -49,6 +49,10 @@ def signin():
 ##--------Sign Up Functionality from html page----------##
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
+     """ Get user's input of all his data to sign him up.
+     Frist of all chechks two inserted passwords and then go to DataAccess Layer to validate and insert DB
+     """
+     error = ''
      try:
         if request.method == 'POST':
             uname = str(request.form['uname'])
@@ -58,7 +62,8 @@ def signup():
             
             
             if(pswdf != pswds):
-                print("paswword dont equal")
+                error = 'Your passwords are not equal!'
+                return render_template("index.html",signup = error)
                 #return error message
             else:
                 fname =  str(request.form['fname'])
@@ -70,18 +75,9 @@ def signup():
                 comments = str(request.form['comment'])
 
                 userptr = UserController.User_Controller()
+                #return values of errors!
                 resp = userptr.signup_handler(uname,pswdf,email,fname,lname,number,address,city,zipCode,comments)
-            
-            if resp == 404:
-                print("User not Fount")
-                return render_template("index.html")
 
-            elif resp == 100:
-                print("Wrong UserName/Password format")
-                return render_template("index.html")
-
-            else:#resp = 0 - OK
-                return render_template("item.html")
             gc.collect()
         else:
             return render_template("index.html")

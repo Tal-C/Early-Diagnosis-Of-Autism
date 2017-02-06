@@ -76,11 +76,13 @@
     <Content Include="FlaskApp\static\img\autism2.png" />
     <Content Include="FlaskApp\static\img\Baby3.png" />
     <Content Include="FlaskApp\static\img\bg.jpg" />
+    <Content Include="FlaskApp\static\img\bg2.jpg" />
     <Content Include="FlaskApp\static\img\bg2.png" />
     <Content Include="FlaskApp\static\img\bg_login2.jpg" />
     <Content Include="FlaskApp\static\img\bg_login3.jpg" />
     <Content Include="FlaskApp\static\img\cloud03.jpg" />
     <Content Include="FlaskApp\static\img\default-avatar.png" />
+    <Content Include="FlaskApp\static\img\bg3.jpg" />
     <Content Include="FlaskApp\static\img\faces\face-0.jpg" />
     <Content Include="FlaskApp\static\img\faces\face-1.jpg" />
     <Content Include="FlaskApp\static\img\faces\face-2.jpg" />

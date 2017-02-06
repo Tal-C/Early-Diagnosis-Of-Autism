@@ -28,10 +28,33 @@ class User_Controller():
        
     def signup_handler(self,uname,pswdf,email,fname,lname,number,address,city,zipCode,comments):
         #validation
-        #reg exp
+        #__reg exp__:
+        ##pswd
+        psswdMatch = re.compile(r'^(?=.*?\d)(?=.*?[A-Z])(?=.*?[a-z])[A-Za-z\d]{8,}$')
+        ispswdMatch = psswdMatch.match(password)
+        if(ispswdMatch is  None ):
+            return 'password' 
+        ##email
+        emailMatch = re.compile(r'(\b[\w.]+@+[\w.]+.+[\w.]\b)')
+        isemailMatch = emailMatch.match(email)
+        if(isemailMatch is  None ):
+            return 'email' 
+        ##userName
+        userMatch = re.compile(r'^(?=.*?[A-Z])(?=.*?[a-z])[A-Za-z\d]{6,15}$')
+        isnameMatch = userMatch.match(userName)
+        if(isnameMatch is  None ):
+            return 'user name' 
+        #phone number
+        phoneMatch = re.compile(r'(?=.*?\d){10}')
+        isphoneMatch = phoneMatch.match(number)
+        if(isphoneMatch is  None ):
+            return 'phone number' 
+
         #insertion
         params= (uname,pswdf,email,fname,lname,address,city,number,zipCode,comments,2)
         mysqlptr = MySQLConnector.MySQL_Connector()
-        mysqlptr.ExecuteSP_Params('sp_insert_user',params)
+        id = mysqlptr.ExecuteSP_Params('sp_insert_user',params)
+        return id
         
             
+        

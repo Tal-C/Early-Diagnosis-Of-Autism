@@ -231,7 +231,7 @@ a:after {
 /* item Wrap */
 
 #itemwrap {
-	background: url(../img/gb_login4.jpg) no-repeat center top;
+	background: url(../img/bg3.jpg) no-repeat center top;
 	margin-top: 0px;
     padding-top: 70px;
     text-align: center;
@@ -339,8 +339,9 @@ a:after {
 	margin-left: 20px;
     font-family: Calibri;
 	color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 	display: block;
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: 700;
 	line-height: 40px;
 	letter-spacing: 0.1em;
@@ -348,11 +349,12 @@ a:after {
 }
 
 .menu a:hover {
-	color: #000000;
+	color:gray;/*#CHANGED!!!!!!!!!!!!!!!!!!!!*/
 }
 
 .menu a:active {
 	color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
 .menu a > i {
