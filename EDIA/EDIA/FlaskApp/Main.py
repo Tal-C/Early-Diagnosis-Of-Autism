@@ -13,7 +13,7 @@ class Main(object):
 
     
     #files_list = ('content/%s'%video_name, None)
-    files_list = ('content/Roi Video', None) #-------- Original
+    #files_list = ('content/Roi Video', None) #-------- Original
     for name in files_list:
         start_time = time.time()
         vid_analizer = VideoAnalizer('%s.mp4'%(name),False)
