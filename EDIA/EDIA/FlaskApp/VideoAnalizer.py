@@ -27,31 +27,31 @@ class VideoAnalizer(object):
     # This function validates the input video
     def check_file(self, file_name):
         list = file_name.split('.')
-        if list[len(list)-1] != "mp4":
+        if list[len(list) - 1] != "mp4":
             print "Invalid file. File must be a mp4 file"
             return False
         if not os.path.isfile(file_name):
-            print "File dose not exists"
+            print "File does not exists"
             return False
         return True
 
     # This function defines the codec and creates VideoWriter object
     def create_video_writer(self, file_name):
         name = os.path.splitext(file_name)[0]                       # define the new video name
-        self.fps = self.cap.get(cv2.cv.CV_CAP_PROP_FPS)             # get video frames-per-second number
-        width = int(self.cap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH))   # get video frames width and height
-        height = int(self.cap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT))
+        self.fps = self.cap.get(cv2.CAP_PROP_FPS)             # get video frames-per-second number
+        width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))   # get video frames width and height
+        height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         # if video size is too large
         if width > 640:
-            num = float(width)/640
-            height = int(height/num)
-            width = int(width/num)
+            num = float(width) / 640
+            height = int(height / num)
+            width = int(width / num)
         if self.rotate:
             size = (height,width)                                      # define new video frame size
         else:
             size = (width,height)
-        fourcc = cv2.cv.CV_FOURCC(*'XVID')
-        self.out = cv2.VideoWriter("%s_output.avi"%name ,fourcc, self.fps, size)
+        fourcc = cv2.FOURCC(*'XVID')
+        self.out = cv2.VideoWriter("%s_output.avi" % name ,fourcc, self.fps, size)
 
     # This function reads the video frame after frame
     def read_video(self, name):
@@ -71,10 +71,10 @@ class VideoAnalizer(object):
             # rotate the frame
             if self.rotate:
                 frame = self.rotate_90(frame)  
-            # if video size is too large                 
+            # if video size is too large
             if len(frame) > 640:
-                frame = self.resize_image(frame,int(len(frame)/640))
-            # search faces         
+                frame = self.resize_image(frame,int(len(frame) / 640))
+            # search faces
             img_analizer = ImageAnalizer(frame , prev_frame, prev_faces, frame_num)
             prev_frame = frame.copy()
             ## for privacy
@@ -102,7 +102,7 @@ class VideoAnalizer(object):
         organs_tracker.print_data(name,frame_num)
         # print organs information to the jason file
         objects_json = json.dumps(self.video_dict)  #create jason object
-        f = open('%s_objects.json'%(name), 'w')
+        f = open('%s_objects.json' % (name), 'w')
         print >> f, objects_json
         f.close()
 
@@ -116,7 +116,7 @@ class VideoAnalizer(object):
     # This function resizes a given image
     def resize_image(self, img, num):    
         height, width, a = img.shape
-        dim = (width/num, height/num)
+        dim = (width / num, height / num)
         return cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
     
     # This function updates the dictionary of all organs
@@ -146,13 +146,13 @@ class VideoAnalizer(object):
 # This function captures and saves a video from computer camera, and display it on the screen
 def camera_capture(file_name):
     cap = cv2.VideoCapture(0)
-    width = int(cap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH))   # get video frames width and height
-    height = int(cap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT))
+    width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))   # get video frames width and height
+    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = 30.0
     size = (width,height)
     #Define the codec and create VideoWriter object
-    fourcc = cv2.cv.CV_FOURCC(*'XVID')
-    out = cv2.VideoWriter("%s.avi"%file_name ,fourcc, fps, size)
+    fourcc = cv2.FOURCC(*'XVID')
+    out = cv2.VideoWriter("%s.avi" % file_name ,fourcc, fps, size)
     while(cap.isOpened()):
         #Capture frame by frame
         ret, frame = cap.read()
@@ -167,8 +167,8 @@ def camera_capture(file_name):
     cap.release()
     out.release()
     try:
-        os.remove("%s.mp4"%file_name)
+        os.remove("%s.mp4" % file_name)
     except:
         pass
-    os.rename("%s.avi"%file_name, "%s.mp4"%file_name)
+    os.rename("%s.avi" % file_name, "%s.mp4" % file_name)
     cv2.destroyAllWindows()
