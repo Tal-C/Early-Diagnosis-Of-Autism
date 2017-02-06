@@ -1,8 +1,10 @@
 ﻿from VideoAnalizer import VideoAnalizer
 from VideoAnalizer import camera_capture
 import time
+import cv2 
 
 class Main(object):
+    print(cv2.__version__)
     """ The main class of the project.
         The class sends videos to analize. """
     # list of video files
@@ -16,10 +18,10 @@ class Main(object):
     #files_list = ('content/Roi Video', None) #-------- Original
     for name in files_list:
         start_time = time.time()
-        vid_analizer = VideoAnalizer('%s.mp4'%(name),False)
+        vid_analizer = VideoAnalizer('%s.mp4' % (name),False)
         if vid_analizer.cap is None:
             continue
         vid_analizer.read_video(name)
-        f = open('%s_output.txt'%name, 'a')  
-        print >> f," system running time: %s minutes"%((time.time() - start_time)/60)
+        f = open('%s_output.txt' % name, 'a')  
+        print >> f," system running time: %s minutes" % ((time.time() - start_time) / 60)
         f.close()

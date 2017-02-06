@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="he">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,7 +55,7 @@
             <h2>Early Diagnosis Of Autism</h2>
 
             {% for i in range(0,signin.shape[0]) %}
-            <h3>Welcome {{ signin[i][4] }}  {{ signin[i][5] }} !</h3>
+            <h3><b>Welcome {{ signin[i][4] }}  {{ signin[i][5] }} !</b></h3>
 
             {% endfor %}
 
@@ -86,10 +86,10 @@
     <div id="g">
         <div class="container">
             <div class="row">
-                <h3>Guidelines photography</h3>
+                <h3><b>Guidelines photography</b></h3>
                 <br>
                 <br>
-                <h4>Click on the icon to download the guidelines</h4>
+                <h4><b>Click on the icon to download the guidelines</b></h4>
                 <a href="{{url_for('static', filename='pdf/project.pdf')}}" download>
                     <img border="0" src="{{url_for('static', filename='img/logo_trans.png')}}" width="104" height="142">
                 </a>

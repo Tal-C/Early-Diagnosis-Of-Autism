@@ -12,7 +12,6 @@ def main():
     return render_template('index.html')
 
 ##--------SignIn Functionality from html page----------##
-
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     """ get user name and password from sign in fields
@@ -50,7 +49,7 @@ def signin():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
      """ Get user's input of all his data to sign him up.
-     Frist of all chechks two inserted passwords and then go to DataAccess Layer to validate and insert DB
+     First of all chechks two inserted passwords and then go to DataAccess Layer to validate and insert DB
      """
      error = ''
      try:
@@ -66,8 +65,8 @@ def signup():
                 return render_template("index.html",signup = error)
                 #return error message
             else:
-                fname =  str(request.form['fname'])
-                lname =  str(request.form['lname'])
+                fname = str(request.form['fname'])
+                lname = str(request.form['lname'])
                 address = "" if request.form['address'] == None else str(request.form['address'])
                 number = str(request.form['number'])
                 city = str(request.form['city'])
@@ -83,6 +82,12 @@ def signup():
             return render_template("index.html")
      except Exception as e:
          return render_template("item.html",error = error)
+##--------upload video Functionality from html page----------##
+
+#def upload_video():
+#    return
+
+
 
 ##--------buildRequest Functionality from html page----------##
 @app.route('/buildRequest', methods=['GET', 'POST'])
@@ -92,7 +97,9 @@ def buildRequest():
         and the video, sends the video to VideoController to check validation """
 
     #get the video
-    #send the video to VideoController - check the size and qulity of the video and send to Main(video)
+
+    #send the video to VideoController - check the size and qulity of the video
+    #and send to Main(video)
     #Main(object)#object = video
     
     print("Hello to build Request")

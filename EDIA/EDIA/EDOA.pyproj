@@ -30,6 +30,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="content\" />
     <Folder Include="FlaskApp\static\css\images\" />
     <Folder Include="FlaskApp\static\img\faces\" />
     <Folder Include="FlaskApp\static\pdf\" />
@@ -50,6 +51,7 @@
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\Roi Video.mp4" />
     <Content Include="FlaskApp\static\css\animate.min.css" />
     <Content Include="FlaskApp\static\css\bootstrap.css" />
     <Content Include="FlaskApp\static\css\bootstrap.min.css" />
@@ -220,9 +222,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskApp\OrgansTracker.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FlaskApp\Run.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskApp\UserController.py">
