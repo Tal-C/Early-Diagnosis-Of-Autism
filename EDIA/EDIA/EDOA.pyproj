@@ -50,8 +50,6 @@
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="content\Katia.mp4" />
-    <Content Include="content\Roi Video.mp4" />
     <Content Include="FlaskApp\static\css\animate.min.css" />
     <Content Include="FlaskApp\static\css\bootstrap.css" />
     <Content Include="FlaskApp\static\css\bootstrap.min.css" />
