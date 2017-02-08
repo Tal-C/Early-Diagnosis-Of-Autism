@@ -215,7 +215,7 @@
                                     <div><input type="file" name="video" id="video_file" onchange="fileSelected();" /></div>
                                 </div>
                                 <div>
-                                    <input type="button" value="Upload video" onclick="startUploading()" />
+                                    <input type="button" value="Upload video" action="{{url_for('upload_video')}}"onclick="startUploading()" />
                                 </div>
                                 <div id="fileinfo">
                                     <div id="filename"></div>

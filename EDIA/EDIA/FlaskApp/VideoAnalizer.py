@@ -1,4 +1,4 @@
-import os
+﻿import os
 import cv2
 import numpy as np
 import json
@@ -41,17 +41,20 @@ class VideoAnalizer(object):
         self.fps = self.cap.get(cv2.CAP_PROP_FPS)             # get video frames-per-second number
         width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))   # get video frames width and height
         height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        
         # if video size is too large
         if width > 640:
-            num = float(width) / 640
-            height = int(height / num)
-            width = int(width / num)
+            num = float(width)/640
+            height = int(height/num)
+            width = int(width/num)
+        if(width > height):
+            self.rotate = True
         if self.rotate:
             size = (height,width)                                      # define new video frame size
         else:
             size = (width,height)
-        fourcc = cv2.FOURCC(*'XVID')
-        self.out = cv2.VideoWriter("%s_output.avi" % name ,fourcc, self.fps, size)
+        fourcc = cv2.VideoWriter_fourcc(*'XVID')
+        self.out = cv2.VideoWriter("%s_output.avi"%name ,fourcc, self.fps, size)
 
     # This function reads the video frame after frame
     def read_video(self, name):
@@ -71,10 +74,10 @@ class VideoAnalizer(object):
             # rotate the frame
             if self.rotate:
                 frame = self.rotate_90(frame)  
-            # if video size is too large
+            # if video size is too large                 
             if len(frame) > 640:
                 frame = self.resize_image(frame,int(len(frame) / 640))
-            # search faces
+            # search faces         
             img_analizer = ImageAnalizer(frame , prev_frame, prev_faces, frame_num)
             prev_frame = frame.copy()
             ## for privacy

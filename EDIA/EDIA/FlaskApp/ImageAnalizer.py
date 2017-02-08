@@ -1,4 +1,4 @@
-import numpy as np
+﻿import numpy as np
 from CascadeDictionary import d
 from Face import Face
 from Face import calc_d
@@ -27,8 +27,11 @@ class ImageAnalizer(object):
     # This function detect frontal/profile-faces in a given image
     def face_detection(self, prev_faces):
         # find faces
-        faces = d.get('haarcascade_frontalface_default').detectMultiScale(self.frame, 1.5, 2)  
-        p_faces = d.get('haarcascade_profileface').detectMultiScale(self.frame, 1.85, 2)
+        print(d.items())
+        face_cascade = cv2.CascadeClassifier('C:\Users\Katia\Anaconda3\pkgs\opencv-3.1.0-np111py35_1\Library\etc\haarcascades\haarcascade_frontalface_default.xml')
+#        faces = d.get('haarcascade_frontalface_default') 
+        faces = face_cascade.detectMultiScale(self.frame, 1.5, 2)  
+        p_faces =face_cascade.detectMultiScale(self.frame, 1.85, 2)
         if len(faces) == 0:
             faces = p_faces
         elif len(p_faces) != 0:

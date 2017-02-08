@@ -47,6 +47,7 @@
     <Folder Include="FlaskApp\static\img\" />
     <Folder Include="FlaskApp\static\js\" />
     <Folder Include="FlaskApp\static\" />
+    <Folder Include="content\" />
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
