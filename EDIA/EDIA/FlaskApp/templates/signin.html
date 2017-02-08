@@ -135,9 +135,8 @@
                         <h4 class="title"><b>Your request</b></h4>
                     </div>
                     <div class="content">
-                        <form method="post" action="{{url_for('buildRequest')}}">
+                        <form method="post" action="{{url_for('buildRequest')}}" enctype="multipart/form-data">
                             {% for i in range(0,signin.shape[0]) %}
-                            
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
@@ -206,44 +205,11 @@
                                     </div>
                                 </div>
                             </div>
-                           
-                            {% endfor %}
-                            <div class="row">
-                                <!--------------------------------------------------------------------->
-                                <div>
-                                    <div><label for="image_file">Here you can select and upload the video you want</label></div>
-                                    <div><input type="file" name="video" id="video_file" onchange="fileSelected();" /></div>
-                                </div>
-                                <div>
-                                    <input type="button" value="Upload video" action="{{url_for('upload_video')}}"onclick="startUploading()" />
-                                </div>
-                                <div id="fileinfo">
-                                    <div id="filename"></div>
-                                    <div id="filesize"></div>
-                                    <div id="filetype"></div>
-                                    <div id="filedim"></div>
-                                </div>
-                                <div id="error">You should select valid image files only!</div>
-                                <div id="error2">An error occurred while uploading the file</div>
-                                <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
-                                <div id="warnsize">Your file is very big. We can't accept it. Please select more small file</div>
-                                <div id="progress_info">
-                                    <div id="progress"></div>
-                                    <div id="progress_percent">&nbsp;</div>
-                                    <div class="clear_both"></div>
-                                    <div>
-                                        <div id="speed">&nbsp;</div>
-                                        <div id="remaining">&nbsp;</div>
-                                        <div id="b_transfered">&nbsp;</div>
-                                        <div class="clear_both"></div>
-                                    </div>
-                                    <div id="upload_response"></div>
-                                </div>
-                                <!--------------------------------------------------------------------->
-                            </div>
-                            <button type="submit" class="btn btn-info btn-fill pull-right">Submit a request</button>
 
-                            <!--   <div class="clearfix"></div>-->
+                            {% endfor %}
+                            <!--New Upload!-->
+                            <input type="file" name="video_file"><br /><br />
+                            <input type="submit" class="btn btn-info btn-fill pull-right" value="Submit a request">
                         </form>
                     </div>
                 </div>

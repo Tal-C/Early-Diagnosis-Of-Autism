@@ -1,11 +1,19 @@
-﻿from flask import Flask, render_template, url_for,request,redirect
+﻿import os
+from flask import Flask, render_template, url_for,request,redirect, send_from_directory
 import requests
 import gc
 import UserController
 import time
 import numpy as np
+from werkzeug import secure_filename
+import VideoController
 
 app = Flask(__name__)
+
+#Config:
+app.config['UPLOAD_FOLDER'] = 'content/'#dest path
+app.config['ALLOWED_EXTENSIONS'] = set(['mp4'])#temp only mp4
+
 ##Load the first page
 @app.route('/')
 def main():
@@ -83,11 +91,10 @@ def signup():
      except Exception as e:
          return render_template("item.html",error = error)
 ##--------upload video Functionality from html page----------##
-
-#def upload_video():
-#    return
-
-
+# For a given file, return whether it's an allowed type or not
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
 
 ##--------buildRequest Functionality from html page----------##
 @app.route('/buildRequest', methods=['GET', 'POST'])
@@ -97,23 +104,40 @@ def buildRequest():
         and the video, sends the video to VideoController to check validation """
 
     #get the video
-
+    if request.method == "POST":
+        video = request.files['video_file']
+        #check type of the video
+        if video and allowed_file(video.filename):
+            # Make the filename safe, remove unsupported chars
+            filename = secure_filename(video.filename)
+            # Move the file form the temporal folder to
+            # the upload folder we setup
+            video.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            # Redirect the user to the uploaded_file route, which
+            # will basicaly show on the browser the uploaded file
+            video_ptr = VideoController.Video_Controller()
+            resp = video_ptr.video_handler(video.filename)
+            #return redirect(url_for('uploaded_file',filename=filename)) #change to view
+            return render_template('uploaded_file.html',filename = video)
     #send the video to VideoController - check the size and qulity of the video
     #and send to Main(video)
     #Main(object)#object = video
     
     print("Hello to build Request")
     return render_template('index.html')
-#def upload_video():
-#    print("Hello from upload a video")
-#    return        
+
+
+
+@app.route('/uploaded_file', methods=['GET', 'POST'])
+def uploaded_file(filename):
+    video = send_from_directory(app.config['UPLOAD_FOLDER'],filename)
+    print("Video!!!!", video)
+    return render_template('uploaded_file.html',filename = video)
 ##--------------ITEM-FUNCS-----------------------------------##
 @app.route('/logout')
 def logout():
     time.sleep(5)
     return render_template("index.html")
-
-
 
 if __name__ == "__main__":
     app.run()

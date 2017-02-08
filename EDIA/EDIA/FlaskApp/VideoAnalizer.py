@@ -47,8 +47,8 @@ class VideoAnalizer(object):
             num = float(width)/640
             height = int(height/num)
             width = int(width/num)
-        if(width > height):
-            self.rotate = True
+        #if(width > height):
+        #    self.rotate = True
         if self.rotate:
             size = (height,width)                                      # define new video frame size
         else:
