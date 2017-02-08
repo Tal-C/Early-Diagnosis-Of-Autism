@@ -13,11 +13,12 @@
 
 
 })(jQuery)
+//--------------------Video Upload --------------------//
 // common variables
 var iBytesUploaded = 0;
 var iBytesTotal = 0;
 var iPreviousBytesLoaded = 0;
-var iMaxFilesize = 1048576; // 1MB
+//var iMaxFilesize = 1048576; // 1MB
 var oTimer = 0;
 var sResultFileSize = '';
 
@@ -50,20 +51,23 @@ function fileSelected() {
     document.getElementById('warnsize').style.display = 'none';
 
     // get selected file element
-    var oFile = document.getElementById('image_file').files[0];
+    //var oFile = document.getElementById('video_file').files[0];
+    //alert(oFile)
+    //var oFile = document.getElementById('video_file');
+    //alert(oFile)
 
     // filter for image files
-    var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
-    if (!rFilter.test(oFile.type)) {
-        document.getElementById('error').style.display = 'block';
-        return;
-    }
+    //var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
+    //if (!rFilter.test(oFile.type)) {
+    //    document.getElementById('error').style.display = 'block';
+    //    return;
+    //}
 
     // little test for filesize
-    if (oFile.size > iMaxFilesize) {
-        document.getElementById('warnsize').style.display = 'block';
-        return;
-    }
+    //if (oFile.size > iMaxFilesize) {
+    //    document.getElementById('warnsize').style.display = 'block';
+    //    return;
+    //}
 
     // get preview element
     var oImage = document.getElementById('preview');
@@ -114,14 +118,14 @@ function startUploading() {
     oXHR.addEventListener('load', uploadFinish, false);
     oXHR.addEventListener('error', uploadError, false);
     oXHR.addEventListener('abort', uploadAbort, false);
-    oXHR.open('POST', 'upload.php');
+    oXHR.open('POST', 'StartUp.py');
     oXHR.send(vFD);
 
     // set inner timer
     oTimer = setInterval(doInnerUpdates, 300);
 }
-
-function doInnerUpdates() { // we will use this function to display upload speed
+// we will use this function to display upload speed
+function doInnerUpdates() { 
     var iCB = iBytesUploaded;
     var iDiff = iCB - iPreviousBytesLoaded;
 
@@ -188,6 +192,10 @@ function uploadAbort(e) { // upload abort
     document.getElementById('abort').style.display = 'block';
     clearInterval(oTimer);
 }
+//=================================================================//
+//=================================================================//
+//=================================================================//
+//=================================================================//
 //-----------PopUp - Func ----------------
 // Get the modal
 var modal = document.getElementById('id01');

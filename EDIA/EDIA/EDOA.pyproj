@@ -51,7 +51,6 @@
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="content\Roi Video.mp4" />
     <Content Include="FlaskApp\static\css\animate.min.css" />
     <Content Include="FlaskApp\static\css\bootstrap.css" />
     <Content Include="FlaskApp\static\css\bootstrap.min.css" />
@@ -189,6 +188,7 @@
     <Content Include="FlaskApp\templates\expert.html" />
     <Content Include="FlaskApp\templates\index.html" />
     <Content Include="FlaskApp\templates\signin.html" />
+    <Content Include="FlaskApp\templates\uploaded_file.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FlaskApp\CascadeDictionary.py">
@@ -237,6 +237,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FlaskApp\VideoAnalizer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskApp\VideoController.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
