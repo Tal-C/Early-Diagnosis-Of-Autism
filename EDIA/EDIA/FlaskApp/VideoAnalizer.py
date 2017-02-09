@@ -154,6 +154,7 @@ def camera_capture(file_name):
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = 30.0
     size = (width,height)
+
     #Define the codec and create VideoWriter object
     fourcc = cv2.FOURCC(*'XVID')
     out = cv2.VideoWriter("%s.avi" % file_name ,fourcc, fps, size)
@@ -163,6 +164,7 @@ def camera_capture(file_name):
         if ret != True:
             break
         out.write(frame)
+
         #Display the resulting frame
         cv2.imshow('frame', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
