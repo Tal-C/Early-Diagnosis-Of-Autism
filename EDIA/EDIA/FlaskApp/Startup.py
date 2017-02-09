@@ -81,7 +81,6 @@ def signup():
                 city = str(request.form['city'])
                 zipCode = str(request.form['zip'])
                 comments = str(request.form['comment'])
-                #--------------------#
                 userptr = UserController.User_Controller()
                 #return values of errors!
                 resp = userptr.signup_handler(uname,pswdf,email,fname,lname,number,address,city,zipCode,comments)
