@@ -29,7 +29,6 @@ class ImageAnalizer(object):
         # find faces
         print(d.items())
         face_cascade = cv2.CascadeClassifier('C:\Users\Katia\Anaconda3\pkgs\opencv-3.1.0-np111py35_1\Library\etc\haarcascades\haarcascade_frontalface_default.xml')
-#        faces = d.get('haarcascade_frontalface_default') 
         faces = face_cascade.detectMultiScale(self.frame, 1.5, 2)  
         p_faces =face_cascade.detectMultiScale(self.frame, 1.85, 2)
         if len(faces) == 0:
