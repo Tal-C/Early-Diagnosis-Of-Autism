@@ -29,7 +29,6 @@ class ImageAnalizer(object):
         # find faces
         print(d.items())
         
-        
         face_cascade = cv2.CascadeClassifier('C:\\Users\\tal\\Downloads\\opencv\\sources\\data\\haarcascades\\haarcascade_frontalface_default.xml')
         #test = face_cascade.load('C:\Users\tal\Downloads\opencv\sources\data\haarcascades\haarcascade_frontalface_default.xml')
 #        faces = d.get('haarcascade_frontalface_default') 
