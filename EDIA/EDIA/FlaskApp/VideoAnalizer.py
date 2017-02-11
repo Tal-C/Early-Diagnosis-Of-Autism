@@ -23,6 +23,7 @@ class VideoAnalizer(object):
         self.cap = cv2.VideoCapture(file_name)
         self.create_video_writer(file_name)
         self.video_dict = {}
+        self.file_name = file_name
 
     # This function validates the input video
     def check_file(self, file_name):

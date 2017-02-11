@@ -60,6 +60,7 @@ def signup():
      First of all chechks two inserted passwords and then go to DataAccess Layer to validate and insert DB
      """
      error = ''
+    
      try:
         if request.method == 'POST':
             uname = str(request.form['uname'])
@@ -80,11 +81,11 @@ def signup():
                 city = str(request.form['city'])
                 zipCode = str(request.form['zip'])
                 comments = str(request.form['comment'])
-
                 userptr = UserController.User_Controller()
                 #return values of errors!
                 resp = userptr.signup_handler(uname,pswdf,email,fname,lname,number,address,city,zipCode,comments)
-
+                error = "Succesfuly Registered!"
+                return render_template("index.html",signin = error)
             gc.collect()
         else:
             return render_template("index.html")
@@ -97,8 +98,8 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
 
 ##--------buildRequest Functionality from html page----------##
-@app.route('/buildRequest', methods=['GET', 'POST'])
-def buildRequest():
+@app.route('/buildRequest?user=<userID>', methods=['GET', 'POST'])
+def buildRequest(userID):
     #Integration
     """ get the request from client with all data
         and the video, sends the video to VideoController to check validation """
@@ -110,13 +111,11 @@ def buildRequest():
         if video and allowed_file(video.filename):
             # Make the filename safe, remove unsupported chars
             filename = secure_filename(video.filename)
-            # Move the file form the temporal folder to
-            # the upload folder we setup
+            # Move the file form the temporal folder to the upload folder we setup
             video.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            # Redirect the user to the uploaded_file route, which
-            # will basicaly show on the browser the uploaded file
+            #Sends the video to Video Controller to integrate codes and insert to DB 
             video_ptr = VideoController.Video_Controller()
-            resp = video_ptr.video_handler(video.filename)
+            resp = video_ptr.video_handler(video.filename,int(userID))
             #return redirect(url_for('uploaded_file',filename=filename)) #change to view
             return render_template('uploaded_file.html',filename = video)
     #send the video to VideoController - check the size and qulity of the video

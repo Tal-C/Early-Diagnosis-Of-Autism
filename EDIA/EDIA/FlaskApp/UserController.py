@@ -31,7 +31,7 @@ class User_Controller():
         #__reg exp__:
         ##pswd
         psswdMatch = re.compile(r'^(?=.*?\d)(?=.*?[A-Z])(?=.*?[a-z])[A-Za-z\d]{8,}$')
-        ispswdMatch = psswdMatch.match(password)
+        ispswdMatch = psswdMatch.match(pswdf)
         if(ispswdMatch is  None ):
             return 'password' 
         ##email
@@ -41,7 +41,7 @@ class User_Controller():
             return 'email' 
         ##userName
         userMatch = re.compile(r'^(?=.*?[A-Z])(?=.*?[a-z])[A-Za-z\d]{6,15}$')
-        isnameMatch = userMatch.match(userName)
+        isnameMatch = userMatch.match(uname)
         if(isnameMatch is  None ):
             return 'user name' 
         #phone number
@@ -51,7 +51,7 @@ class User_Controller():
             return 'phone number' 
 
         #insertion
-        params= (uname,pswdf,email,fname,lname,address,city,number,zipCode,comments,2)
+        params= (str(uname),str(pswdf),str(email),str(fname),str(lname),str(address),str(city),str(number),str(zipCode),str(comments),2)
         mysqlptr = MySQLConnector.MySQL_Connector()
         id = mysqlptr.ExecuteSP_Params('sp_insert_user',params)
         return id
