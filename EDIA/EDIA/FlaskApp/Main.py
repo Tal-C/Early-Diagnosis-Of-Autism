@@ -7,7 +7,7 @@ class Main():
     """ The main class of the project.
         The class sends videos to analize. """
     # list of video files
-    ## save a video usinf computer camera
+    ## save a video using computer camera
     #camera_capture("content/rivka11")
     def __init__(self):
         return
