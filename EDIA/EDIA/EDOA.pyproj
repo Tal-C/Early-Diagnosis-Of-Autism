@@ -233,9 +233,6 @@
     <Compile Include="FlaskApp\User.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="FlaskApp\socket.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="FlaskApp\VideoAnalizer.py">
       <SubType>Code</SubType>
     </Compile>
