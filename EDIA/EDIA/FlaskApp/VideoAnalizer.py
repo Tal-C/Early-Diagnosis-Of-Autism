@@ -36,7 +36,7 @@ class VideoAnalizer(object):
             return False
         return True
 
-    # This function defines the codec and creates VideoWriter object
+    # This function defines the code and creates VideoWriter object
     def create_video_writer(self, file_name):
         name = os.path.splitext(file_name)[0]                       # define the new video name
         self.fps = self.cap.get(cv2.CAP_PROP_FPS)             # get video frames-per-second number
