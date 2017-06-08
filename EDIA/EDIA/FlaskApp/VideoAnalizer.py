@@ -24,6 +24,7 @@ class VideoAnalizer(object):
         self.create_video_writer(file_name)
         self.video_dict = {}
         self.file_name = file_name
+        self.report_str = ""
 
     # This function validates the input video
     def check_file(self, file_name):
@@ -38,7 +39,7 @@ class VideoAnalizer(object):
 
     # This function defines the code and creates VideoWriter object
     def create_video_writer(self, file_name):
-        name = os.path.splitext(file_name)[0]                       # define the new video name
+        name = os.path.splitext(file_name)[0]                 # define the new video name
         self.fps = self.cap.get(cv2.CAP_PROP_FPS)             # get video frames-per-second number
         width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))   # get video frames width and height
         height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -104,6 +105,10 @@ class VideoAnalizer(object):
 
         # print movement information to the text file
         organs_tracker.print_data(name,frame_num)
+
+        # get movement information into string
+        self.report_str = organs_tracker.get_report_str()
+
         # print organs information to the jason file
         objects_json = json.dumps(self.video_dict)  #create jason object
         f = open('%s_objects.json' % (name), 'w')
@@ -146,6 +151,9 @@ class VideoAnalizer(object):
         self.cap.release()
         self.out.release()
         cv2.destroyAllWindows()
+
+    def get_report_str(self):
+        return self.report_str
 
 # This function captures and saves a video from computer camera, and display it on the screen
 def camera_capture(file_name):

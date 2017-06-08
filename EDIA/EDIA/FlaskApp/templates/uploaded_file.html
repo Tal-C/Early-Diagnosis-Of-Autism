@@ -1,38 +1,38 @@
-﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>EDOA - Data Report</title>
-    <!--Icon title-->
-    <link rel="icon" href="{{ url_for('static', filename='img/logo_trans.png') }} " type="image/png" />
-    <style>
-        body {
-            background-image: url("../static/img/new.jpg"); 
-        }
-    </style>
-</head>
-<body>
-    <video controls autoplay>
-        <source src="/content/" type="video/mp4">
-    </video>
+<!DOCTYPE html>
+<html lang = "en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset = "utf-8" />
+        
+        <title>EDOA - Data Report</title > 
 
-    <h1>Technical data:</h1><br />
-    <br />
-    <h2>Video length: </h2><br />
-    <h2>Time get: </h2><br />
-    <br />
-    <h2>Amount of identification of a child from the mother: </h2><br />
-    <h2>Amount of facial movement: </h2><br />
-    <h2>Total duration of facial movement: </h2><br />
-    <h2>Amount of eye movements: </h2><br />
-    <br />
-    <h2>Number of frames: </h2><br />
-    <br />
-    <h2>System running time: </h2><br />
+        <link rel = "stylesheet" href="{{url_for('static',filename='css/jquery.mobile-1.4.5.css')}}">
+        <!--Icon title-->
+        <link rel = "icon" href="{{ url_for('static', filename='img/logo_trans.png') }} " type = "image/png" />
+        
+        <script src = "{{ url_for('static', filename='js/jquery.min.js') }}" > </script>
+        <script src = "{{url_for('static',filename='js/jquery-1.10.2.js')}}" > </script> 
+        
+        <style>
+            body {
+                background-image: url("../static/img/new.jpg")
+            }
+        </style>
+    </head>
+    <body>
+        
+		<h2>smiles were detected in sequence at 26% of the frames</h2>
 
+		<h2>smiles were detected at 90% of the frames</h2>
 
-  
-   
-</body>
+		<h2>eyes moves in 49% of the frames</h2>
+
+		<h2>head moves in 70% of the frames</h2>
+
+		<h2>number of frames: 449</h2>
+
+		<h2>System running time: 2.7376000007 minutes</h2>
+
+    </body>
 </html>
+        
