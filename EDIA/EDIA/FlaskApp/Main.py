@@ -68,17 +68,17 @@ class Main():
             }
         </style>
     </head>
-    <body>
+    <body><center>
         <center><h1 class="font-style">EDOA - Data Report</h1></center>
-        <hr/>
+        <hr/><br/>
         """
 
         report_str_arr = report_str.split("\n");
         for s in report_str_arr:
-            html_str += "\n\t\t<h2>" + s + "</h2>\n"
+            html_str += "\n\t\t<h2>" + s + "</h2>\n<br/>"
         
         html_str += """
-    </body>
+    </center></body>
 </html>
         """
 
