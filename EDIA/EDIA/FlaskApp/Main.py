@@ -24,14 +24,14 @@ class Main():
 
         vid_analizer.read_video(file_path)
         f = open('%s_output.txt' % file_path, 'a')  
-        print >> f,"System running time: %s minutes" % ((time.time() - start_time) / 60)
+        print >> f,"System running time: %.3f minutes" % ((time.time() - start_time) / 60)
 
         f.close()
 
         report_str = vid_analizer.get_report_str()
-        report_str += "\nSystem running time: %s minutes" % ((time.time() - start_time) / 60)
+        report_str += "\nSystem running time: %.3f minutes" % ((time.time() - start_time) / 60)
 
-        print(report_str)
+        #print(report_str)
 
         html_file = open("C:\\Users\\tal\\Source\\Repos\\Diagnosis-of-Autism\\EDIA\\EDIA\\FlaskApp\\templates\\uploaded_file.html", 'w')
 
@@ -54,13 +54,27 @@ class Main():
             body {
                 background-image: url("../static/img/new.jpg")
             }
+            .font-style { 
+                font-style: italic;
+            }
+            hr { 
+                display: block;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                margin-left: auto;
+                margin-right: auto;
+                border-style: inset;
+                border-width: 1px;
+            }
         </style>
     </head>
     <body>
+        <center><h1 class="font-style">EDOA - Data Report</h1></center>
+        <hr/>
         """
 
-        report_sr_arr = report_str.split("\n");
-        for s in report_sr_arr:
+        report_str_arr = report_str.split("\n");
+        for s in report_str_arr:
             html_str += "\n\t\t<h2>" + s + "</h2>\n"
         
         html_str += """
