@@ -40,7 +40,8 @@ def signin():
 
             elif resp == 100:
                 error = 'Wrong UserName/Password format'
-                return render_template("index.html",signin = error)
+                #return render_template("index.html",signin = error)
+               
 
             else:#resp = 0 - OK
                 #Insert data to the page Welcome {Name} + Data To the Table
@@ -111,7 +112,7 @@ def buildRequest(userID):
         if video and allowed_file(video.filename):
             # Make the filename safe, remove unsupported chars
             filename = secure_filename(video.filename)
-            # Move the file form the temporal folder to the upload folder we setup
+            # Move the file form the temporal folder to the upload folder we setupped
             video.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             #Sends the video to Video Controller to integrate codes and insert to DB 
             video_ptr = VideoController.Video_Controller()
@@ -122,7 +123,6 @@ def buildRequest(userID):
     #and send to Main(video)
     #Main(object)#object = video
     
-    print("Hello to build Request")
     return render_template('index.html')
 
 

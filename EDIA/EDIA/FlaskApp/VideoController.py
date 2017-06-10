@@ -14,3 +14,8 @@ class Video_Controller():
         params = (int(user_id),str(resp_video),str(''))
         resp_db = mysqlptr.ExecuteSP_Params('sp_insert_video_by_user_id',params)
         return
+
+    def video_all(self):
+        mysqlptr = MySQLConnector.MySQL_Connector()
+        resp_db = mysqlptr.ExecuteSP('sp_get_all_videos')
+        return resp_db

@@ -261,7 +261,7 @@ class Face(object):
         else:
             return self.x+self.w/2,self.y+self.h/2
 
-    # This function returns the nse center
+    # This function returns the nose center
     def get_nose_center(self):
         try:
             return self.organs_dict["nose"].get_center()
@@ -321,3 +321,5 @@ def calc_d(point1, point2):
     x = point1[0] - point2[0]
     y = point1[1] - point2[1]
     return math.hypot(x,y)
+
+#This function checks if there is a face at 

@@ -149,16 +149,24 @@ class OrgansTracker(object):
   
     # This function prints the data into the text file
     def print_data(self, file_name, frames_num):
+        s = ""
         self.max_smiles_in_sequence = max(self.max_smiles_in_sequence, self.smiles_in_sequence)
         d = self.counters
         f = open('%s_output.txt'%(file_name), 'w')  
         if frames_num > 10:
             # reduce 10 from sum because the track starts at frame 11
             print >> f, "smiles were detected in sequence at {0}% of the frames".format(int(float(self.max_smiles_in_sequence)/(d["faces"])*100))
+            s += "smiles were detected in sequence at {0}% of the frames".format(int(float(self.max_smiles_in_sequence)/(d["faces"])*100))
             print >> f, "smiles were detected at {0}% of the frames".format(int(float(d["smiles"])/(d["faces"])*100))
+            s +=  "smiles were detected at {0}% of the frames".format(int(float(d["smiles"])/(d["faces"])*100))
             print >> f, "eyes moves in {0}% of the frames".format(int(float(self.eyes_move)/(d["eyes"])*100))
+            s += "eyes moves in {0}% of the frames".format(int(float(self.eyes_move)/(d["eyes"])*100))
             print >> f, "head moves in {0}% of the frames".format(int(float(self.head_move)/(d["noses"])*100))
+            s += "head moves in {0}% of the frames".format(int(float(self.head_move)/(d["noses"])*100))
         else:
             print >> f, "video is to short"
+            s += "video is to short"
         print >> f, "number of frames: ",frames_num
+        s +=  "number of frames: ",frames_num
         f.close()   
+        return s
