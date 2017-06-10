@@ -51,9 +51,10 @@ class Main():
         <script src = "{{url_for('static',filename='js/jquery-1.10.2.js')}}" > </script> 
         
         <style>
-            body {
-                background-image: url("../static/img/new.jpg")
-            }
+			img {
+				opacity: 0.2;
+				filter: alpha(opacity=50); /* For IE8 and earlier */
+			}
             .font-style { 
                 font-style: italic;
             }
@@ -64,11 +65,11 @@ class Main():
                 margin-left: auto;
                 margin-right: auto;
                 border-style: inset;
-                border-width: 1px;
+                border-width: 2px;
             }
         </style>
     </head>
-    <body><center>
+    <body background="../static/img/1.png" ><center>
         <center><h1 class="font-style">EDOA - Data Report</h1></center>
         <hr/><br/>
         """

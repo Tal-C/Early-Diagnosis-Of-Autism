@@ -14,9 +14,10 @@
         <script src = "{{url_for('static',filename='js/jquery-1.10.2.js')}}" > </script> 
         
         <style>
-            body {
-                background-image: url("../static/img/new.jpg")
-            }
+			img {
+				opacity: 0.2;
+				filter: alpha(opacity=50); /* For IE8 and earlier */
+			}
             .font-style { 
                 font-style: italic;
             }
@@ -27,25 +28,25 @@
                 margin-left: auto;
                 margin-right: auto;
                 border-style: inset;
-                border-width: 1px;
+                border-width: 2px;
             }
         </style>
     </head>
-    <body><center>
+    <body background="../static/img/1.png" ><center>
         <center><h1 class="font-style">EDOA - Data Report</h1></center>
         <hr/><br/>
         
-		<h2>smiles were detected in sequence at 26% of the frames</h2>
+		<h2>smiles were detected in sequence at 17% of the frames</h2>
 <br/>
-		<h2>smiles were detected at 90% of the frames</h2>
+		<h2>smiles were detected at 81% of the frames</h2>
 <br/>
-		<h2>eyes moves in 49% of the frames</h2>
+		<h2>eyes moves in 52% of the frames</h2>
 <br/>
-		<h2>head moves in 70% of the frames</h2>
+		<h2>head moves in 84% of the frames</h2>
 <br/>
-		<h2>number of frames: 449</h2>
+		<h2>number of frames: 520</h2>
 <br/>
-		<h2>System running time: 3.093 minutes</h2>
+		<h2>System running time: 3.372 minutes</h2>
 <br/>
     </center></body>
 </html>
