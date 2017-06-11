@@ -1,15 +1,53 @@
-﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-    <video controls autoplay>
-        <source src="/content/" type="video/mp4">
-    </video>
-  
-   
-</body>
+<!DOCTYPE html>
+<html lang = "en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset = "utf-8" />
+        
+        <title>EDOA - Data Report</title > 
+
+        <link rel = "stylesheet" href="{{url_for('static',filename='css/jquery.mobile-1.4.5.css')}}">
+        <!--Icon title-->
+        <link rel = "icon" href="{{ url_for('static', filename='img/logo_trans.png') }} " type = "image/png" />
+        
+        <script src = "{{ url_for('static', filename='js/jquery.min.js') }}" > </script>
+        <script src = "{{url_for('static',filename='js/jquery-1.10.2.js')}}" > </script> 
+        
+        <style>
+			img {
+				opacity: 0.2;
+				filter: alpha(opacity=50); /* For IE8 and earlier */
+			}
+            .font-style { 
+                font-style: italic;
+            }
+            hr { 
+                display: block;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                margin-left: auto;
+                margin-right: auto;
+                border-style: inset;
+                border-width: 2px;
+            }
+        </style>
+    </head>
+    <body background="../static/img/1.png" ><center>
+        <center><h1 class="font-style">EDOA - Data Report</h1></center>
+        <hr/><br/>
+        
+		<h2>smiles were detected in sequence at 17% of the frames</h2>
+<br/>
+		<h2>smiles were detected at 27% of the frames</h2>
+<br/>
+		<h2>eyes moves in 52% of the frames</h2>
+<br/>
+		<h2>head moves in 54% of the frames</h2>
+<br/>
+		<h2>number of frames: 81</h2>
+<br/>
+		<h2>System running time: 0.443 minutes</h2>
+<br/>
+    </center></body>
 </html>
+        
