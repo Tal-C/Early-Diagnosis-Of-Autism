@@ -155,19 +155,19 @@ class OrgansTracker(object):
         f = open('%s_output.txt'%(file_name), 'w')  
         if frames_num > 10:
             # reduce 10 from sum because the track starts at frame 11
-            print >> f, "smiles were detected in sequence at {0}% of the frames".format(int(float(self.max_smiles_in_sequence)/(d["faces"])*100))
-            self.report_str += "smiles were detected in sequence at {0}% of the frames\n".format(int(float(self.max_smiles_in_sequence)/(d["faces"])*100))
-            print >> f, "smiles were detected at {0}% of the frames".format(int(float(d["smiles"])/(d["faces"])*100))
-            self.report_str += "smiles were detected at {0}% of the frames\n".format(int(float(d["smiles"])/(d["faces"])*100))
-            print >> f, "eyes moves in {0}% of the frames".format(int(float(self.eyes_move)/(d["eyes"])*100))
-            self.report_str += "eyes moves in {0}% of the frames\n".format(int(float(self.eyes_move)/(d["eyes"])*100))
-            print >> f, "head moves in {0}% of the frames".format(int(float(self.head_move)/(d["noses"])*100))
-            self.report_str += "head moves in {0}% of the frames\n".format(int(float(self.head_move)/(d["noses"])*100))
+            print >> f, "Smiles were detected in sequence at {0}% of the frames".format(int(float(self.max_smiles_in_sequence)/(d["faces"])*100))
+            self.report_str += "Smiles were detected in sequence at {0}% of the frames\n".format(int(float(self.max_smiles_in_sequence)/(d["faces"])*100))
+            print >> f, "Smiles were detected at {0}% of the frames".format(int(float(d["smiles"])/(d["faces"])*100))
+            self.report_str += "Smiles were detected at {0}% of the frames\n".format(int(float(d["smiles"])/(d["faces"])*100))
+            print >> f, "Eyes moves in {0}% of the frames".format(int(float(self.eyes_move)/(d["eyes"])*100))
+            self.report_str += "Eyes moves in {0}% of the frames\n".format(int(float(self.eyes_move)/(d["eyes"])*100))
+            print >> f, "Head moves in {0}% of the frames".format(int(float(self.head_move)/(d["noses"])*100))
+            self.report_str += "Head moves in {0}% of the frames\n".format(int(float(self.head_move)/(d["noses"])*100))
         else:
-            print >> f, "video is too short"
+            print >> f, "Video is too short"
         
-        print >> f, "number of frames: ", frames_num
-        self.report_str += "number of frames: {0}".format(frames_num) 
+        print >> f, "Number of frames: ", frames_num
+        self.report_str += "Number of frames: {0}".format(frames_num) 
 
         f.close()
 
