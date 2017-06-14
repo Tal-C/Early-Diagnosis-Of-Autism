@@ -172,6 +172,9 @@
     <Content Include="FlaskApp\templates\uploaded_file.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlaskApp\AudioAnalyzer.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FlaskApp\CascadeDictionary.py">
       <SubType>Code</SubType>
     </Compile>

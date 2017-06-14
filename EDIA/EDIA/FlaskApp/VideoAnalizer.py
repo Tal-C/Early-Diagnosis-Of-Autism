@@ -8,7 +8,7 @@ import time
 from Face import calc_d
 from collections import deque
 from OrgansTracker import OrgansTracker
-
+import AudioAnalyzer
 
 class VideoAnalizer(object):
     """ This class receives a video, read it frame by frame and
@@ -21,11 +21,12 @@ class VideoAnalizer(object):
             return
         self.rotate = rotate
         self.cap = cv2.VideoCapture(file_name)
+        
         self.create_video_writer(file_name)
         self.video_dict = {}
         self.file_name = file_name
         self.report_str = ""
-
+    #This
     # This function validates the input video
     def check_file(self, file_name):
         list = file_name.split('.')
@@ -57,8 +58,19 @@ class VideoAnalizer(object):
             size = (width,height)
         fourcc = cv2.VideoWriter_fourcc(*'XVID')
         self.out = cv2.VideoWriter("%s_output.avi"%name ,fourcc, self.fps, size)
+        ####AUDIO
+        self.extract_audio(name)
+        audio_analyzer = AudioAnalyzer.AudioAnalyzer(name)
+    
 
-    # This function reads the video frame after frame
+    #This function extracts audio from video
+    def extract_audio(self,file_name):
+        #ffmpeg -i video.flv -vn -ar 44100 -ac 2 -ab 192 -f mp3 audio.mp3
+        command = "ffmpeg -i "+file_name+".mp4 -vn -ar 44100 -ac 2 -ab 192 -f mp3 "+ file_name+".wav"
+        os.system(command)
+        return
+
+    # This function reads the video frame after. frame
     def read_video(self, name):
         self.all_faces = {}
         prev_frame = None               # for the opticflow function
