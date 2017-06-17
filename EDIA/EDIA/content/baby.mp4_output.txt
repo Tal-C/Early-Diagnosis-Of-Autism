@@ -1,6 +1,6 @@
-smiles were detected in sequence at 17% of the frames
-smiles were detected at 81% of the frames
-eyes moves in 52% of the frames
-head moves in 84% of the frames
-number of frames:  520
-System running time: 3.371 minutes
+Smiles were detected in sequence at 17% of the frames
+Smiles were detected at 81% of the frames
+Eyes moves in 53% of the frames
+Head moves in 84% of the frames
+Number of frames:  520
+System running time: 3.991 minutes
