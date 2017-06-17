@@ -150,6 +150,7 @@ class OrgansTracker(object):
   
     # This function prints the data into the text file
     def print_data(self, file_name, frames_num):
+        s = ""
         self.max_smiles_in_sequence = max(self.max_smiles_in_sequence, self.smiles_in_sequence)
         d = self.counters
         f = open('%s_output.txt'%(file_name), 'w')  
@@ -169,7 +170,7 @@ class OrgansTracker(object):
         print >> f, "Number of frames: ", frames_num
         self.report_str += "Number of frames: {0}".format(frames_num) 
 
-        f.close()
+        f.close()   
 
     def get_report_str(self):
         return self.report_str

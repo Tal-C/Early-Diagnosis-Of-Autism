@@ -1,6 +1,0 @@
-smiles were detected in sequence at 8% of the frames
-smiles were detected at 8% of the frames
-eyes moves in 0% of the frames
-head moves in 80% of the frames
-number of frames:  1778
- system running time: 5.19448333184 minutes

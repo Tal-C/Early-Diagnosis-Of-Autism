@@ -33,7 +33,7 @@
             <img src="{{url_for('static', filename='img/logo.png')}} " />
             <i class="icon-remove menu-close"></i>
             <a href="#guidelines" class="smoothScroll">Guidelines page</a>
-            <a href="#request" class="smoothScroll">Request to expert</a>
+            <a href="#request" class="smoothScroll">Submit a request</a>
             <a href="{{url_for('logout')}}" class="smoothScroll">Log out</a>
             <a href="#contact" class="smoothScroll">Contact</a>
             <a href="#"><i class="icon-facebook"></i></a>
@@ -126,10 +126,12 @@
             <br>
             <br>
         </div><!-- /container -->
-
+        <section id="request" name="request"></section>
         <div class="container">
             <div class="row">
+               
                 <!--==============================================New======================================-->
+              
                 <div class="card">
                     <div class="header">
                         <h4 class="title"><b>Your request</b></h4>
@@ -141,7 +143,7 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label><b>User name</b></label>
-                                        <input type="text" name="user_name"class="form-control" disabled placeholder="User name" value="{{ signin[i][1] }}">
+                                        <input type="text" name="user_name" class="form-control" disabled placeholder="User name" value="{{ signin[i][1] }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -162,7 +164,7 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label><b>Last name:</b></label>
-                                        <input type="text" name ="last_name" class="form-control" placeholder="Last Name" value="{{ signin[i][5] }}">
+                                        <input type="text" name="last_name" class="form-control" placeholder="Last Name" value="{{ signin[i][5] }}">
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +173,7 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label><b>Address</b></label>
-                                        <input type="text" name="address"class="form-control" value="{{ signin[i][6] }}">
+                                        <input type="text" name="address" class="form-control" value="{{ signin[i][6] }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -213,7 +215,6 @@
                         </form>
                     </div>
                 </div>
-                <!--====================================================================================-->
             </div>
         </div>
 

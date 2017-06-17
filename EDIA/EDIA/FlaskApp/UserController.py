@@ -8,7 +8,6 @@ class User_Controller():
 
     def signin_handler(self,userName,password):
         
-        print("Hello")
         psswdMatch = re.compile(r'^(?=.*?\d)(?=.*?[A-Z])(?=.*?[a-z])[A-Za-z\d]{8,}$')
         ispswdMatch = psswdMatch.match(password)
 

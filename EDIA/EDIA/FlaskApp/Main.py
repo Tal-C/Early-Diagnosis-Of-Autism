@@ -4,12 +4,15 @@ import time
 import cv2 
 import codecs
 
+from hachoir_parser import createParser
+from hachoir_metadata import extractMetadata
+
 class Main():
     """ The main class of the project.
         The class sends videos to analize. """
     # list of video files
-    ## save a video using computer camera
-    #camera_capture("content/rivka11")
+    ## save a video usinf computer camera
+    
     def __init__(self):
         return
 
@@ -18,7 +21,9 @@ class Main():
         #files_list = ('content/Katia', None) #-------- Original
         #for name in files_list:
         start_time = time.time()
-        vid_analizer = VideoAnalizer('%s' % file_path, False)
+
+        vid_analizer = VideoAnalizer('%s' %file_path,False)
+        
         if vid_analizer.cap is None:
            return 404   #Cannot find the file
 
@@ -33,7 +38,7 @@ class Main():
 
         #print(report_str)
 
-        html_file = open("C:\\Users\\tal\\Source\\Repos\\Diagnosis-of-Autism\\EDIA\\EDIA\\FlaskApp\\templates\\uploaded_file.html", 'w')
+        html_file = open("C:\\Users\\Katia\\Source\\Repos\\Diagnosis-of-Autism\\EDIA\\EDIA\\FlaskApp\\templates\\uploaded_file.html", 'w')
 
         html_str = """
 <!DOCTYPE html>
@@ -100,5 +105,5 @@ class Main():
 #        html_file.close()
 #        report_file.close()
 
-        return video_name  
+        return video_name
      
