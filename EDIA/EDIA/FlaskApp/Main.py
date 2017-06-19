@@ -34,74 +34,19 @@ class Main():
         report_str = vid_analizer.get_report_str()
         report_str += "\nSystem running time: %.3f minutes" % ((time.time() - start_time) / 60)
 
-        #print(report_str)
+        #total_smiles_detected = vid_analizer.getTotalSmilesDetected()
+        #smiles_detected_in_sequence = vid_analizer.getSmilesInSequence()
+        #eyes_movement = vid_analizer.getEyesMovement()
+        #head_movement = vid_analizer.getHeadMovement()
+        #num_of_frames = vid_analizer.getNumOfFrames()
+        #running_time = (time.time() - start_time) / 60
 
-        html_file = open("C:\\Users\\Katia\\Source\\Repos\\Diagnosis-of-Autism\\EDIA\\EDIA\\FlaskApp\\templates\\uploaded_file.html", 'w')
-
-        html_str = """
-<!DOCTYPE html>
-<html lang = "en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta charset = "utf-8" />
-        
-        <title>EDOA - Data Report</title > 
-
-        <link rel = "stylesheet" href="{{url_for('static',filename='css/jquery.mobile-1.4.5.css')}}">
-        <!--Icon title-->
-        <link rel = "icon" href="{{ url_for('static', filename='img/logo_trans.png') }} " type = "image/png" />
-        
-        <script src = "{{ url_for('static', filename='js/jquery.min.js') }}" > </script>
-        <script src = "{{url_for('static',filename='js/jquery-1.10.2.js')}}" > </script> 
-        
-        <style>
-			img {
-				opacity: 0.2;
-				filter: alpha(opacity=50); /* For IE8 and earlier */
-			}
-            .font-style { 
-                font-style: italic;
-            }
-            hr { 
-                display: block;
-                margin-top: 0.5em;
-                margin-bottom: 0.5em;
-                margin-left: auto;
-                margin-right: auto;
-                border-style: inset;
-                border-width: 2px;
-            }
-        </style>
-    </head>
-    <body background="../static/img/1.png" ><center>
-        <center><h1 class="font-style">EDOA - Data Report</h1></center>
-        <hr/><br/>
-        """
-
-        report_str_arr = report_str.split("\n");
-        for s in report_str_arr:
-            html_str += "\n\t\t<h2>" + s + "</h2>\n<br/>"
-        
-        html_str += """
-    </center></body>
-</html>
-        """
-
-        html_file.write(html_str)
-        html_file.close()
-
-#        html_file =
-#        open("C:\Users\tal\Source\Repos\Diagnosis-of-Autism\EDIA\EDIA\FlaskApp\templates\uploaded_file.html",
-#        'r+')
-#        html_lines = html_file.readlines()
-#        print(html_lines)
-#        html_lines.insert(0, report_str)
-
-#        html_file =
-#        open("C:\Users\tal\Source\Repos\Diagnosis-of-Autism\EDIA\EDIA\FlaskApp\templates\uploaded_file.html",
-#        'w')
-#        html_file.writelines(html_lines)
-#        html_file.close()
-#        report_file.close()
+        #print "total smiles: {}".format(total_smiles_detected)
+        #print "seq smiles: {}".format(smiles_detected_in_sequence)
+        #print "eyes movement: {}".format(eyes_movement)
+        #print "head movement: {}".format(head_movement)
+        #print "num of frames: {}".format(num_of_frames)
+        #print "running time: {}".format(running_time)
 
         return video_name
      

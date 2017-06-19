@@ -104,8 +104,8 @@
     <Content Include="FlaskApp\static\img\logo.png" />
     <Content Include="FlaskApp\static\img\logo_trans.png" />
     <Content Include="FlaskApp\static\img\new.jpg" />
+    <Content Include="FlaskApp\static\js\Charts.js" />
     <Content Include="FlaskApp\static\js\jquery-1.11.3.min.js" />
-    <Content Include="FlaskApp\static\js\work3.png" />
     <Content Include="FlaskApp\static\js\bootstrap-checkbox-radio-switch.js" />
     <Content Include="FlaskApp\static\js\bootstrap-notify.js" />
     <Content Include="FlaskApp\static\js\bootstrap-select.js" />

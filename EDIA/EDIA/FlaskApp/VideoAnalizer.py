@@ -26,6 +26,12 @@ class VideoAnalizer(object):
         self.video_dict = {}
         self.file_name = file_name
         self.report_str = ""
+
+        self.total_smiles_detected = 0
+        self.smiles_detected_in_sequence = 0
+        self.eyes_movement = 0
+        self.head_movement = 0
+        self.num_of_frames = 0
     #This
     # This function validates the input video
     def check_file(self, file_name):
@@ -72,7 +78,7 @@ class VideoAnalizer(object):
         os.system(command)
         return
 
-    # This function reads the video frame after. frame
+    # This function reads the video frame after frame
     def read_video(self, name):
         self.all_faces = {}
         prev_frame = None               # for the opticflow function
@@ -123,6 +129,13 @@ class VideoAnalizer(object):
         # get movement information into string
         self.report_str = organs_tracker.get_report_str()
 
+        # get movement information into variables:
+        self.total_smiles_detected = organs_tracker.getTotalSmilesDetected()
+        self.smiles_detected_in_sequence = organs_tracker.getSmilesInSequence()
+        self.eyes_movement = organs_tracker.getEyesMovement()
+        self.head_movement = organs_tracker.getHeadMovement()
+        self.num_of_frames = organs_tracker.getNumOfFrames()
+
         # print organs information to the jason file
         objects_json = json.dumps(self.video_dict)  #create jason object
         f = open('%s_objects.json' % (name), 'w')
@@ -168,6 +181,21 @@ class VideoAnalizer(object):
 
     def get_report_str(self):
         return self.report_str
+
+    def getTotalSmilesDetected(self):
+        return self.total_smiles_detected
+
+    def getSmilesInSequence(self):
+        return self.smiles_detected_in_sequence
+
+    def getEyesMovement(self):
+        return self.eyes_movement
+
+    def getHeadMovement(self):
+        return self.head_movement
+
+    def getNumOfFrames(self):
+        return self.num_of_frames
 
 # This function captures and saves a video from computer camera, and display it on the screen
 def camera_capture(file_name):

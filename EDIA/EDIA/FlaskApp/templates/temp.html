@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang = "en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset = "utf-8" />
+        
+        <title>EDOA - Data Report</title > 
+
+        <link rel = "stylesheet" href="{{url_for('static',filename='css/jquery.mobile-1.4.5.css')}}">
+        <!--Icon title-->
+        <link rel = "icon" href="{{ url_for('static', filename='img/logo_trans.png') }} " type = "image/png" />
+
+        <!-- Charts: -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        
+		<!-- jQuery: -->
+		<script src="../static/js/jquery.min.js"></script>
+		
+        <style>
+			img {
+				opacity: 0.2;
+				filter: alpha(opacity=50); /* For IE8 and earlier */
+			}
+            .font-style { 
+                font-style: italic;
+            }
+            hr { 
+                display: block;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                margin-left: auto;
+                margin-right: auto;
+                border-style: inset;
+                border-width: 2px;
+            }
+            
+        </style>
+    </head>
+    <body background="../static/img/1.png">
+        <center><h1 class="font-style">EDOA - Data Report</h1></center>
+        <hr/><br/>
+        
+        <center><div id="barchart_values" style="width: 900px; height: 300px;"></div></center>
+		
+        <script src="../static/js/Charts.js"></script>
+    </body>
+</html>
+        

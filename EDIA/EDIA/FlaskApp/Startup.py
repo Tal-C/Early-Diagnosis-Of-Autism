@@ -130,7 +130,6 @@ def buildRequest(userID):
 @app.route('/uploaded_file', methods=['GET', 'POST'])
 def uploaded_file(filename):
     video = send_from_directory(app.config['UPLOAD_FOLDER'],filename)
-    print("Video!!!!", video)
     return render_template('uploaded_file.html',filename = video)
 ##--------------ITEM-FUNCS-----------------------------------##
 @app.route('/logout')
