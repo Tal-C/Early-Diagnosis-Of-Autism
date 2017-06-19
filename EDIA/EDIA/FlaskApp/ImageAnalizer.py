@@ -5,6 +5,7 @@ from Face import calc_d
 import cv2
 import time
 import math
+import os
 
 class ImageAnalizer(object):
     """ This class receives a frame and previous frame and search
@@ -29,7 +30,7 @@ class ImageAnalizer(object):
         # find faces
         print(d.items())
         #######################
-        face_cascade = cv2.CascadeClassifier('C:\\Users\\tal\\Downloads\\opencv\\sources\\data\\haarcascades\\haarcascade_frontalface_default.xml')
+        face_cascade = cv2.CascadeClassifier(os.getcwd()+'\\haarcascades\\haarcascade_frontalface_default.xml')
         faces = face_cascade.detectMultiScale(self.frame, 1.5, 2)  
         p_faces =face_cascade.detectMultiScale(self.frame, 1.85, 2)
         if len(faces) == 0:
