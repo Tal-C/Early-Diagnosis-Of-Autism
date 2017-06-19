@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang = "en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -9,10 +9,13 @@
         <link rel = "stylesheet" href="{{url_for('static',filename='css/jquery.mobile-1.4.5.css')}}">
         <!--Icon title-->
         <link rel = "icon" href="{{ url_for('static', filename='img/logo_trans.png') }} " type = "image/png" />
+
+        <!-- Charts: -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         
-        <script src = "{{ url_for('static', filename='js/jquery.min.js') }}" > </script>
-        <script src = "{{url_for('static',filename='js/jquery-1.10.2.js')}}" > </script> 
-        
+		<!-- jQuery: -->
+		<script src="../static/js/jquery.min.js"></script>
+		
         <style>
 			img {
 				opacity: 0.2;
@@ -30,24 +33,15 @@
                 border-style: inset;
                 border-width: 2px;
             }
+            
         </style>
     </head>
-    <body background="../static/img/1.png" ><center>
+    <body background="../static/img/1.png">
         <center><h1 class="font-style">EDOA - Data Report</h1></center>
         <hr/><br/>
         
-		<h2>smiles were detected in sequence at 16% of the frames</h2>
-<br/>
-		<h2>smiles were detected at 40% of the frames</h2>
-<br/>
-		<h2>eyes moves in 4% of the frames</h2>
-<br/>
-		<h2>head moves in 0% of the frames</h2>
-<br/>
-		<h2>number of frames: 49</h2>
-<br/>
-		<h2>System running time: 1.218 minutes</h2>
-<br/>
-    </center></body>
+        <center><div id="barchart_values" style="width: 900px; height: 300px;"></div></center>
+		
+        <script src="../static/js/Charts.js"></script>
+    </body>
 </html>
-        

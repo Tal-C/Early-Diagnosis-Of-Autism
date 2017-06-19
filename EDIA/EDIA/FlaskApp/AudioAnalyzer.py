@@ -1,5 +1,5 @@
-﻿import acoustid
-import pyaudio
+﻿#import acoustid
+#import pyaudio
 import wave
 import os
 import numpy as np

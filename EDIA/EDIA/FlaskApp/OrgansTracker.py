@@ -23,6 +23,11 @@ class OrgansTracker(object):
         self.smile_label = ""
         self.none = (-1,-1)
         self.report_str = ""
+        self.totalSmilesDetected = 0
+        self.smilesInSequence = 0
+        self.eyesMovement = 0
+        self.headMovement = 0
+        self.num_of_frames = 0
 
     # This function updates the organs variables
     def update_organs(self, faces):
@@ -158,19 +163,43 @@ class OrgansTracker(object):
             # reduce 10 from sum because the track starts at frame 11
             print >> f, "Smiles were detected in sequence at {0}% of the frames".format(int(float(self.max_smiles_in_sequence)/(d["faces"])*100))
             self.report_str += "Smiles were detected in sequence at {0}% of the frames\n".format(int(float(self.max_smiles_in_sequence)/(d["faces"])*100))
+            self.smilesInSequence = int(float(self.max_smiles_in_sequence)/(d["faces"])*100)
+        
             print >> f, "Smiles were detected at {0}% of the frames".format(int(float(d["smiles"])/(d["faces"])*100))
             self.report_str += "Smiles were detected at {0}% of the frames\n".format(int(float(d["smiles"])/(d["faces"])*100))
+            self.totalSmilesDetected = int(float(d["smiles"])/(d["faces"])*100)
+
             print >> f, "Eyes moves in {0}% of the frames".format(int(float(self.eyes_move)/(d["eyes"])*100))
             self.report_str += "Eyes moves in {0}% of the frames\n".format(int(float(self.eyes_move)/(d["eyes"])*100))
+            self.eyesMovement = int(float(self.eyes_move)/(d["eyes"])*100)
+
             print >> f, "Head moves in {0}% of the frames".format(int(float(self.head_move)/(d["noses"])*100))
             self.report_str += "Head moves in {0}% of the frames\n".format(int(float(self.head_move)/(d["noses"])*100))
+            self.headMovement = int(float(self.head_move)/(d["noses"])*100)
+
         else:
             print >> f, "Video is too short"
         
         print >> f, "Number of frames: ", frames_num
         self.report_str += "Number of frames: {0}".format(frames_num) 
+        self.num_of_frames = frames_num
 
         f.close()   
 
     def get_report_str(self):
         return self.report_str
+
+    def getTotalSmilesDetected(self):
+        return self.totalSmilesDetected
+
+    def getSmilesInSequence(self):
+        return self.smilesInSequence
+
+    def getEyesMovement(self):
+        return self.eyesMovement
+
+    def getHeadMovement(self):
+        return self.headMovement
+
+    def getNumOfFrames(self):
+        return self.num_of_frames
