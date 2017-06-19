@@ -4,8 +4,6 @@ import time
 import cv2 
 import codecs
 
-from hachoir_parser import createParser
-from hachoir_metadata import extractMetadata
 
 class Main():
     """ The main class of the project.

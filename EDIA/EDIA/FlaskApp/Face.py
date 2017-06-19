@@ -5,7 +5,7 @@ from Eye import Eye
 from Nose import Nose
 from Mouth import Mouth
 import time
-
+import os
 class Face(object):
     """ This class receives a rectangle of face and search
         for face organs in it"""   
@@ -70,7 +70,7 @@ class Face(object):
         eye_rect = self.img[y1:y2, x1:x2]
 
         #eyes1 = d.get('haarcascade_mcs_eyepair_big').detectMultiScale(self.eye_rect, 1.2, 1)
-        eyes_cascade = cv2.CascadeClassifier('C:\Users\Katia\Anaconda3\pkgs\opencv-3.1.0-np111py35_1\Library\etc\haarcascades\haarcascade_eye.xml')
+        eyes_cascade = cv2.CascadeClassifier(os.getcwd()+'\\haarcascades\\haarcascade_eye.xml')
         eyes = eyes_cascade.detectMultiScale(eye_rect, 1.1, 1)
         for eye in eyes:
             eye[0] += x1
@@ -151,7 +151,7 @@ class Face(object):
         N = 6
         x1,y1,x2,y2 = self.nose_rect(N) 
         nose_rect = self.img[y1:y2, x1:x2]    
-        nose_cascade = cv2.CascadeClassifier('C:\Users\Katia\Anaconda3\pkgs\opencv-3.1.0-np111py35_1\Library\etc\haarcascades\haarcascade_mcs_nose.xml')
+        nose_cascade = cv2.CascadeClassifier(os.getcwd()+'\\haarcascades\\haarcascade_mcs_nose.xml')
         noses = nose_cascade.detectMultiScale(nose_rect, 1.2, 1)
         distance = self.h
         s = self.w*self.h
@@ -196,7 +196,7 @@ class Face(object):
     def smile_detection(self):
         x1,y1,x2,y2 = self.mouth_rect()
         mouth_rect = self.img[y1:y2, x1:x2]
-        smile_cascade = face_cascade = cv2.CascadeClassifier('C:\Users\Katia\Anaconda3\pkgs\opencv-3.1.0-np111py35_1\Library\etc\haarcascades\haarcascade_smile.xml')
+        smile_cascade = face_cascade = cv2.CascadeClassifier(os.getcwd()+'\\haarcascades\\haarcascade_smile.xml')
         smiles = smile_cascade.detectMultiScale(mouth_rect, 1.1, 4)
         #mouthes = d.get('haarcascade_mcs_mouth').detectMultiScale(mouth_rect, 1.5, 2)
         i = None
