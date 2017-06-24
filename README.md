@@ -1,9 +1,12 @@
+
+### Welcome to the Identification-of-Autism wiki!
+
+
+
 ![headline](https://github.com/Tal-C/Identification-of-Autism/blob/master/pics/temp/logo.png)
 
 
-### Welcome to the Early-Diagnosis-of-Autism wiki!
-
-## Description
+## Disclaimer
 This project is developed as a part of the Final Project - Diagnosis-of-Autism. 
 The project focuses on early detection of autism in infants,
 based on the video captured by their parents.
@@ -13,19 +16,16 @@ responses to their enviroment, will be sent to the expert for follow treatment -
 
 
 
-## Please visit our [live application](https://demo.reactstarterkit.com/)
-- Alright, currently only a landing page...
+## Landing Page...
+![landing_page](https://preview.ibb.co/cbtyhk/landing.png)
 
-## [Issue Board](https://github.com/Tal-C/Identification-of-Autism/issues)
+## [Our Live Application](http://34.228.10.5/)
 
-Please visit our wiki for furthur project info: 
-
-### [Team Page](https://github.com/Tal-C/Identification-of-Autism/wiki/Team)
-### [Our Calendar] (https://teamup.com/ks6a6784e73f227028)
+### [Our TODO List](https://trello.com/b/jYUABRA9/edoa-early-diagnosis-of-autism)
 ### Project Documents
-- [Project Idea]
-- [Project Inception]
-- [Software Requirements Specification]
+- [Project Idea](https://github.com/Tal-C/Early-Diagnosis-Of-Autism/wiki/About-the-project)
+- [Project Inception](https://github.com/Tal-C/Early-Diagnosis-Of-Autism/wiki/About-the-project)
+- [Software Requirements Specification](https://github.com/Tal-C/Identification-of-Autism/wiki/Software)
 - [project summary ]
 
 ### Iteration Pages
