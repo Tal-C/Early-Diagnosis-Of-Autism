@@ -1,14 +1,9 @@
 (function () {
-    console.log("In menu functon");
     // Menu settings
     $('#menuToggle, .menu-close').on('click', function () {
-        console.log("Hello from inside");
         $('#menuToggle').toggleClass('active');
-        console.log("active");
         $('body').toggleClass('body-push-toleft');
-        console.log("body-push-toleft");
         $('#theMenu').toggleClass('menu-open');
-        console.log("menu-open");
     });
 
 
@@ -125,7 +120,7 @@ function startUploading() {
     oTimer = setInterval(doInnerUpdates, 300);
 }
 // we will use this function to display upload speed
-function doInnerUpdates() { 
+function doInnerUpdates() {
     var iCB = iBytesUploaded;
     var iDiff = iCB - iPreviousBytesLoaded;
 
@@ -206,3 +201,10 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+
+
+$('#login_form').submit(function () {
+    console.log("loading")
+    $('#loader').css('visibility', 'visible');
+});

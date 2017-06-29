@@ -8,6 +8,7 @@ import numpy as np
 from werkzeug import secure_filename
 import VideoController
 
+
 app = Flask(__name__)
 
 #Config:

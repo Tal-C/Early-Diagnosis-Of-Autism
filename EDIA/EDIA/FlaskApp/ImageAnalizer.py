@@ -28,7 +28,6 @@ class ImageAnalizer(object):
     # This function detect frontal/profile-faces in a given image
     def face_detection(self, prev_faces):
         # find faces
-        print(d.items())
         #######################
         face_cascade = cv2.CascadeClassifier(os.getcwd()+'\\haarcascades\\haarcascade_frontalface_default.xml')
         faces = face_cascade.detectMultiScale(self.frame, 1.5, 2)  

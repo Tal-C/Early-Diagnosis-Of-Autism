@@ -1,5 +1,5 @@
-﻿
-<!DOCTYPE html>
+
+        <!DOCTYPE html>
 <html lang = "en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset = "utf-8" />
@@ -9,12 +9,48 @@
         <link rel = "stylesheet" href="{{url_for('static',filename='css/jquery.mobile-1.4.5.css')}}">
         <!--Icon title-->
         <link rel = "icon" href="{{ url_for('static', filename='img/logo_trans.png') }} " type = "image/png" />
-        
+
         <!-- Charts: -->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         
 		<!-- jQuery: -->
 		<script src="../static/js/jquery.min.js"></script>
+
+        <script>
+            google.charts.load("current", { packages: ["corechart"] });
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ["Element", "Percentage", { role: "style" }],
+        			['Total smiles', 81, '#ba4bff'],
+			['Smiles in sequence', 17, '#ff0000'],
+			['Eyes movement', 53, '#ba4bff'],
+			['Head movement', 84, '#ba4bff']
+
+                ]);
+            var view = new google.visualization.DataView(data);
+                view.setColumns([0, 1,
+                                 {
+                                     calc: "stringify",
+                                     sourceColumn: 1,
+                                     type: "string",
+                                     role: "annotation"
+                                 },
+                                 2]);
+
+                var options = {
+                    title: "Diagnosis Details:",
+                    width: 1000,
+                    height: 400,
+                    bar: { groupWidth: "80%" },
+                    legend: { position: "none" },
+                };
+
+                var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+                chart.draw(view, options);
+            }
+        </script>
 		
         <style>
 			img {
@@ -33,6 +69,10 @@
                 border-style: inset;
                 border-width: 2px;
             }
+			
+			#barchart_values {
+				margin-bottom: 120px;
+			}
             
         </style>
     </head>
@@ -40,8 +80,10 @@
         <center><h1 class="font-style">EDOA - Data Report</h1></center>
         <hr/><br/>
         
-        <center><div id="barchart_values" style="width: 900px; height: 300px;"></div></center>
-		
-        <script src="../static/js/Charts.js"></script>
+        <center>
+            <div id="barchart_values" style="width: 900px; height: 300px;"></div>
+        <div><h2>Number Of Frames: 520</h2></div><div><h2>System Running Time: 4.757 Minutes</h2></div>
+        </center>
     </body>
 </html>
+        

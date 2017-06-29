@@ -32,7 +32,7 @@ class VideoAnalizer(object):
         self.eyes_movement = 0
         self.head_movement = 0
         self.num_of_frames = 0
-    #This
+
     # This function validates the input video
     def check_file(self, file_name):
         list = file_name.split('.')
@@ -69,12 +69,13 @@ class VideoAnalizer(object):
         audio_analyzer = AudioAnalyzer.AudioAnalyzer(name)
         audio_analyzer.reduce_noices()
         self.speech = audio_analyzer.split_audio()
+        audio_analyzer.close_streams()
+    
 
     #This function extracts audio from video
     def extract_audio(self,file_name):
         #ffmpeg -i video.flv -vn -ar 44100 -ac 2 -ab 192 -f mp3 audio.mp3
         command = "ffmpeg -i "+file_name+".mp4 -vn -ar 44100 -ac 2 -ab 192 -f mp3 "+ file_name+".mp3"
-        #command = "ffmpeg -i "+file_name+".mp4 -vn "+file_name+".wav"
         os.system(command)
         return
 
@@ -199,32 +200,32 @@ class VideoAnalizer(object):
 
 # This function captures and saves a video from computer camera, and display it on the screen
 def camera_capture(file_name):
-        cap = cv2.VideoCapture(0)
-        width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))   # get video frames width and height
-        height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-        fps = 30.0
-        size = (width,height)
+    cap = cv2.VideoCapture(0)
+    width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))   # get video frames width and height
+    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    fps = 30.0
+    size = (width,height)
 
-        #Define the codec and create VideoWriter object
-        fourcc = cv2.FOURCC(*'XVID')
-        out = cv2.VideoWriter("%s.avi" % file_name ,fourcc, fps, size)
-        while(cap.isOpened()):
-            #Capture frame by frame
-            ret, frame = cap.read()
-            if ret != True:
-                break
-            out.write(frame)
+    #Define the codec and create VideoWriter object
+    fourcc = cv2.FOURCC(*'XVID')
+    out = cv2.VideoWriter("%s.avi" % file_name ,fourcc, fps, size)
+    while(cap.isOpened()):
+        #Capture frame by frame
+        ret, frame = cap.read()
+        if ret != True:
+            break
+        out.write(frame)
 
-            #Display the resulting frame
-            cv2.imshow('frame', frame)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
+        #Display the resulting frame
+        cv2.imshow('frame', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
          
-        cap.release()
-        out.release()
-        try:
-            os.remove("%s.mp4" % file_name)
-        except:
-            pass
-        os.rename("%s.avi" % file_name, "%s.mp4" % file_name)
-        cv2.destroyAllWindows()
+    cap.release()
+    out.release()
+    try:
+        os.remove("%s.mp4" % file_name)
+    except:
+        pass
+    os.rename("%s.avi" % file_name, "%s.mp4" % file_name)
+    cv2.destroyAllWindows()
